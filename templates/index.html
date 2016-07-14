@@ -14,9 +14,12 @@
 </header>
 
 
-<form class="form-container">
+<form class="form-container" method="post" action="" >
  <div class="form-title"><h2>Chat</h2></div>
-<div id= "textarea" ></div><br>
+<div id= "textarea" >
+Guide: {{ botreply }}
+</div><br>
+
 <input class="form-field" type="text" name="message_box" /> 
       <div class="submit-container">
 <input class="submit-button" type="submit" value="Send" />
