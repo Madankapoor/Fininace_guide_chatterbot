@@ -4,7 +4,7 @@ from chatterbot.training.trainers import ChatterBotCorpusTrainer
 
 chatbot = ChatBot("Fin guide")
 chatbot.set_trainer(ChatterBotCorpusTrainer)
-chatbot.train("chatterbot.corpus.english")
+
 chatbot.train("chatterbot.corpus.english.conversations")
 app=Flask(__name__)
 
