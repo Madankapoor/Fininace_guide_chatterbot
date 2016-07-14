@@ -1,40 +1,4 @@
-/* CSS Document */
 
-body {
-    background-color: white;
-}
-
-h1 {
-     color: Black;
-     text-align: center;
-}
-
-h3 {
-     color: Red;
-     text-align: center;
-}
-
-header{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0f3fa+0,b8e2f6+13,d8f0fc+50,b6dffd+100 */
-background: #e0f3fa; /* Old browsers */
-background: -moz-linear-gradient(top,  #e0f3fa 0%, #b8e2f6 13%, #d8f0fc 50%, #b6dffd 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #e0f3fa 0%,#b8e2f6 13%,#d8f0fc 50%,#b6dffd 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #e0f3fa 0%,#b8e2f6 13%,#d8f0fc 50%,#b6dffd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=0 ); /* IE6-9 */
- 
-   border:dashed 1px green;
-}
- footer
- {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0f3fa+0,b8e2f6+13,d8f0fc+50,b6dffd+100 */
-background: #e0f3fa; /* Old browsers */
-background: -moz-linear-gradient(top,  #e0f3fa 0%, #b8e2f6 13%, #d8f0fc 50%, #b6dffd 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #e0f3fa 0%,#b8e2f6 13%,#d8f0fc 50%,#b6dffd 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #e0f3fa 0%,#b8e2f6 13%,#d8f0fc 50%,#b6dffd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=0 ); /* IE6-9 */
- 
-    border:dashed 1px green;
- }
 
 .form-container {
    align: center;
@@ -155,3 +119,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', end
    height: 100px;
    width: 450px;
 } 
+/* Form */
+
+	.grid-form .form-control {
+		display: block;
+		width: 100% !important;
+	}
+
+/* Feature */
+
+	.features:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.features .feature {
+		display: block;
+		float: left;
+	}

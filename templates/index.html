@@ -1,37 +1,60 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-    <title> 
-    Finance agent - Chat 
-    </title>
-<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='cool.png') }}"  />
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-<body>
-<header>
-     <h1 class = "header_h1" >Your Finance Agent</h1>
-    <h3 class = "header_h3" >An aid for your investment and for your future</h3>
-     <p>All investments are subject to market risk please read the scheme carefully</p>
-</header>
+<html lang="en-US">
+	<head>
+		<title>Finance agent - Chat</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href={{ url_for('static', filename='assets/css/main.css') }} />
+		<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='cool.png') }}"  />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
+		<!-- Banner -->
+			<section id="banner">
+				<h2><strong> Finance agent - Chat </strong> </h2>
+				<p>Tired of searching numerous sites and articles, Get ready to get quick answers to you queries</p>
+				<ul class="actions">
+					<li><a href="#two" class="button special">Get started</a></li>
+				</ul>
+			</section>
 
-<form class="form-container" method="post" action="" >
- <div class="form-title"><h2>Chat</h2></div>
-<div id= "textarea" >
-Guide: {{ botreply }}
-</div><br>
+		<!-- Two -->
+			<section id="two" class="wrapper style2 special">
+				<div class="inner narrow">
+					<header>
+						<h2>Get in touch</h2>
+					</header>
+					
+						<form class="form-container" method="post" action="" >
+							<div class="form-title"><h2>Chat</h2></div>
+							<div id= "textarea" >
+							Guide: {{ botreply }}
+							</div><br>
 
-<input class="form-field" type="text" name="message_box" /> 
-      <div class="submit-container">
-<input class="submit-button" type="submit" value="Send" />
-</div>     
-</form> 
+							<input class="form-field" type="text" name="message_box" /> 
+								  <div class="submit-container">
+							<input class="submit-button" type="submit" value="Send" />
+							</div>     
+						</form> 
+				</div>
+			</section>
 
+	
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>All investments are subject to market risk please read the scheme carefully</p>
+				</div>
+			</footer>
 
-<footer>
-   <p>Created by: Kapoor</p>
-   <p>Contact information: <B> manitkapoor2@gmail.com </B></p>
-</footer> 
+		<!-- Scripts -->
+			<script src={{ url_for('static', filename='assets/js/jquery.min.js' ) }}></script>
+			<script src={{ url_for('static', filename='assets/js/skel.min.js') }}></script>
+			<script src={{ url_for('static', filename='assets/js/util.js') }}></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src={{ url_for('static', filename='assets/js/main.js') }}></script>
 
-
-</body>
-</head>
+	</body>
+</html>
