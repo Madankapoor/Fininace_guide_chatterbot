@@ -8,7 +8,7 @@ chatbot = ChatBot("Ron Obvious")
 chatbot.set_trainer(ChatterBotCorpusTrainer)
 
 
-chatbot.train("chatterbot.corpus.english")
+chatbot.train("chatterbot.corpus.english.conversations")
 
 
 
