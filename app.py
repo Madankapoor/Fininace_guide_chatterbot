@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request
+from chatterbot import ChatBot
 from chatterbot.training.trainers import ListTrainer
 
 chatterbot = ChatBot("Training Example")
@@ -24,7 +25,7 @@ app=Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        sr=chatbot.get_response(request.form["message_box"])
+        sr=chatterbot.get_response(request.form["message_box"])
     else:
         sr=""
     return render_template("index.html",botreply=sr)
