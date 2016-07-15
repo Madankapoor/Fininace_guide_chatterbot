@@ -1,14 +1,16 @@
 from flask import Flask,render_template,request
-
-app=Flask(__name__)
 from chatterbot import ChatBot
 from chatterbot.training.trainers import ChatterBotCorpusTrainer
 
-chatbot = ChatBot("Ron Obvious")
+chatbot = ChatBot("Candru")
 chatbot.set_trainer(ChatterBotCorpusTrainer)
 
-
 chatbot.train("chatterbot.corpus.english.conversations")
+
+
+app=Flask(__name__)
+
+
 
 
 
