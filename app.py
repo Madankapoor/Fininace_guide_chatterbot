@@ -1,12 +1,18 @@
 from flask import Flask,render_template,request
-from chatterbot import ChatBot
-from chatterbot.training.trainers import ChatterBotCorpusTrainer
+from chatterbot.training.trainers import ListTrainer
 
-chatbot = ChatBot("Candru")
-chatbot.set_trainer(ChatterBotCorpusTrainer)
+chatterbot = ChatBot("Training Example")
+chatterbot.set_trainer(ListTrainer)
 
-chatbot.train("chatterbot.corpus.english.conversations")
+chatterbot.train([
+    "Hi there!",
+    "Hello",
+])
 
+chatterbot.train([
+    "Greetings!",
+    "Hello",
+])
 
 app=Flask(__name__)
 
