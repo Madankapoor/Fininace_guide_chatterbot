@@ -1,1 +1,0 @@
-{"Hi there!": {"in_response_to": []}, "Hi": {"in_response_to": []}, "Hello": {"in_response_to": [{"text": "Hi there!", "occurrence": 1}, {"text": "Greetings!", "in_response_to": []}]}, "Greetings!": {"in_response_to": []}}
