@@ -40,3 +40,4 @@ gunicorn>=19.6.0
 chatterbot>=0.4.4
 python-Levenshtein>=0.12.0
 jsondb==0.1.2
+virtualenv
