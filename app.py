@@ -9,7 +9,7 @@ app=Flask(__name__)
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile = "bot_brain.brn")
 else:
-    kernel.bootstrap(learnFiles = "std-startup.xml")
+    kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml b")
     kernel.saveBrain("bot_brain.brn")
 
 @app.route('/',methods=['GET','POST'])
