@@ -1,4 +1,6 @@
 from flask import Flask,render_template,request
+
+ 
 import aiml
 import os
 
@@ -12,11 +14,21 @@ else:
     kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml b")
     kernel.saveBrain("bot_brain.brn")
 
-@app.route('/',methods=['GET','POST'])
+#Main index
+@app.route('/')
 def index():
+    return render_template("index.html",botreply="Hi, How can I help in your queries related to Investments ?")
+
+
+#route for mobile service
+@app.route('/replyalone',methods=['GET','POST'])
+def reply():
     if request.method == 'POST':
-        sr= kernel.respond(request.form["message_box"])
+        sr=kernel.respond(request.form["message_box"])
     else:
-        sr="Hi, How can I help in your queries related to Investments ?"
-        
-    return render_template("index.html",botreply=sr)
+        sr=kernel.respond(request.args.get('message_box'))
+    return "Guide:"+sr
+
+@app.route('/chat')
+def chat():
+    return render_template('chatui.html')
