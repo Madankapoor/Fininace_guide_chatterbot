@@ -1,0 +1,45 @@
+	{% extends "index2.html" %}
+	{% block content %}
+	<!-- start: 2nd Page - Services -->
+	<div id="services" class="color black">
+		<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Login</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			<div class="container">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    <ul>
+				    {% for message in messages %}
+				        <li ><h3 class="login_usrn">{{ message }}</h3> </li>
+				    {% endfor %}
+				    </ul>
+				  {% endif %}
+				{% endwith %}
+			</div>
+            <div class="container" id="LoginForm">   
+				    <form name="login__form" method="post" action="/login">
+				    {% from "_formhelpers.html" import render_field %}
+	                {{ form.hidden_tag() }}
+	                <h1 class="login_usrn">Username:</h1><br />
+	                {{ render_field(form.Email,class = "login_input12",placeholder="Enter your email") }}
+          			<br />
+					<h1 class="login_usrn" >Password:</h1><br />
+					{{ render_field(form.Password1,placeholder="Enter your password") }}
+					<br/>
+					<br>
+					<input type="submit" class="login_button" value="Let me in!!">					
+					</form>  
+			</div>        
+		</div>
+		
+	</div>
+	<!-- end: 2nd Page - Services -->
+	{% endblock  %}

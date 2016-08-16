@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Finance Agent</title> 
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- end: Mobile Specific -->
+	
+
+    <!-- start: CSS -->
+	
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider1.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider2.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider3.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/login_css.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/register_formcss.css') }}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/GoogleFonts.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery-ui.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chat.css') }}"/>
+	<!-- end: CSS -->
+
+
+</head>
+<body>
+	
+
+	<header>
+		
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="navigation"> 
+					<div class="navbar navbar-fixed-top">
+						<div class="navbar-inner">
+							<a class="btn btn-navbar btnOverlay" data-toggle="collapse" data-target=".nav-collapse">
+								menu
+							</a>
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+									<li><a href="#" class="home">Home</a></li>
+									<li><a href="#LoginForm" class="Login">Login</a></li>
+									<li><a href="#" class="about">Register</a></li>
+									<li><a href="#" class="team">Team</a></li>
+									<li><a href="#" class="contact">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>		
+			
+	</header>
+
+
+	<div id="home">
+
+		<div class="demo-1">
+
+	        <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+
+					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="FA"></div>
+							<h2>A Finance Agent</h2>
+							<blockquote><p>An agent for your life to help you achieve what you want in life.</p><cite>Your helper</cite></blockquote>
+						</div>
+					</div>
+
+					<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="MF"></div>
+							<h2>Mutual Funds</h2>
+							<blockquote><p>Well have less knowledge and less time to look upon your money. Special Fund managers will handle your money</p></blockquote>
+						</div>
+					</div>
+
+					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="P"></div>
+							<h2>Real Estates</h2>
+							<blockquote><p>Our bots will guide you to invest in various real estates.</p><cite>Dive in Real Estate</cite></blockquote>
+						</div>
+					</div>
+
+					
+				</div><!-- /sl-slider -->
+
+				<nav id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</nav>
+
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+				</nav>
+
+			</div><!-- /slider-wrapper -->
+
+	    </div>
+
+	</div>
+	<!-- end: 1st Page - Home -->
+	
+	<!-- start: 2nd Page - Services -->
+	<div id="services" class="color black">
+		<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Login</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			
+            <div class="container" id="LoginForm">   
+				    <form name="login__form">
+	                <h1 class="login_usrn">Username:</h1><br />
+					<input type="text" class = "login_input12" name="username" placeholder="Enter your username">				 
+          			<br />
+					<h1 class="login_usrn" >Password:</h1><br />
+					<input type="text" class = "login_input12" name="password" placeholder="Enter your password"><br>
+					<br>
+					<input type="submit" class="login_button" value="Let me in!!">					
+					</form>  
+			</div>        
+		</div>
+		
+	</div>
+	<!-- end: 2nd Page - Services -->
+	
+	<!-- start: 3rd Page - Pricing Tables -->
+	<div id="pricing" class="color blue">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Bot Guides</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+				
+			<!-- start: Table -->
+			<div class="four-tables">
+				
+				<!-- start: Row -->
+				<div class="row-fluid">
+					
+					<div class="span3">
+						<div class="pricing-table">
+							<div class="color-cccddd">
+								<h3>Standard Bot</h3>
+								<h4><span class="price">Cool</span> <span class="time">Hero</span></h4>
+								<ul>
+									<li>Provides General Solutions</li>
+									<li>Solves simple Queries</li>
+									<li>Guides children</li>
+								</ul>
+								<a href="#" class="buy"><span>Chat Now</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="span3">
+						<div class="pricing-table">
+							<div class="color-666777">
+								<h3>Premium Bot</h3>
+								<h4><span class="price">Genius</span> <span class="time">Guy</span></h4>
+								<ul>
+									<li>Provides General Solutions</li>
+									<li>Guides starting Investments</li>
+									<li>Provides solutions bases on your goals</li>
+									<li>Solves simple Queries</li>
+								</ul>
+								<a   class="buy"><span id="chat-Starter" >Chat Now</span></a>
+							</div>
+						</div>
+					</div>	
+
+					<div class="span3">
+						<div class="pricing-table best-option">
+							<div class="color-custom">
+								<h3>Professional Bot</h3>
+								<h4><span class="price">Guide</span> <span class="time">for young</span></h4>
+								<ul>
+							        <li>Provides General Solutions</li>
+									<li>Guides starting Investments</li>
+									<li>Provides solutions bases on your goals</li>
+									<li>Solves simple Queries</li>
+									<li>Guides on Mutual Funds</li>
+									<li>Guides on Insurance Schemes</li>
+									<li>Guides on Real Estate</li>
+								</ul>
+								<a href="#" class="buy"><span>Chat Now</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="span3">
+						<div class="pricing-table">
+							<div class="color-666777">
+								<h3>Ultimate Bot</h3>
+								<h4><span class="price">Guides</span> <span class="time">Senior Citizens</span></h4>
+								<ul>
+									<li>Provides General Solutions</li>
+									<li>Provides Retirement Solutions</li>
+									<li>Claiming Insurance</li>
+									<li>Health Issues</li>
+								</ul>
+								<a href="#" class="buy"><span>Chat Now</span></a>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				<!--end: Row -->
+
+			</div>
+			<!-- end: Table -->
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 3rd Page - Pricing Tables -->
+	
+	<!-- start: 4th Page - Portfolio -->
+	<div id="portfolio" class="color white">
+		
+		<!--start: Container -->
+		<div class="container">
+	
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Life Quotes</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			
+			<!-- start: Flexslider -->
+			<div class="slider">
+				<div id="flex1" class="flexslider">
+					<ul class="slides">
+						
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider1.jpg')}}" alt="" /></div></li>
+
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider2.jpg')}}" alt="" /></div></li>
+
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider3.jpg')}}" alt="" /></div></li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- end: Flexslider -->
+
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 4th Page - Portfolio -->
+	
+	<!-- start: 5th Page - About -->
+	<div id="about" class="color black">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+						<h2><span>Register</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->				
+		
+		     <div class="form_container">
+			  <form name="register_form">
+			  <h1>Register For An Account</h1>
+				<p>To sign-up for a account please provide us with some basic information using
+				the contact form below. Please use valid credentials.</p>
+                <input type="text" placeholder="Name">
+				<input type="password" placeholder="password">
+				<input type="number" placeholder="age" min="10" max="150">
+				<input type="email" placeholder="email">
+                <input type="submit" value="Register"> 				
+			  </form>
+              </div>			 
+			
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 5th Page - About -->
+	
+	<!-- start: 6th Page - Team -->
+	<div id="team" class="color white">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+				<!-- start: Page Title -->
+<div id="page-title">
+
+	<div id="page-title-inner">
+
+			<h2><span>Team</span></h2>
+
+	</div>	
+
+</div>
+<!-- end: Page Title -->				
+
+<!-- start: Row -->
+<div class="row-fluid">
+	
+	<div class ="span12">
+		
+		<!-- start: Team -->	
+		<div id="team">
+						
+			<!-- start: Row -->
+			<div class="row-fluid">
+			
+				<!-- start: About Member -->
+				<div class="span3">
+					<div class="avatar">
+						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team1.jpg')}}" alt="team member">
+					</div>	
+					<div class="team-name">Shaik Shahrukh</div>
+					<div class="position">Helper</div>
+					<p>
+						 Have contributed in this project
+					</p>
+					<div class="social_profiles">
+						<ul class="social-bookmarks">
+							<li class="facebook"><a href="">facebook</a></li>
+							<li class="flickr"><a href="">flickr</a></li>
+							<li class="linkedin"><a href="#">linkedin</a></li>
+							<li class="twitter"><a href="#">twitter</a></li>
+						</ul>
+					</div>	
+				</div>
+				<!-- end: About Member -->
+				
+				<hr class="clean visible-phone">
+
+				<!-- start: About Member -->
+				<div class="span3">
+					<div class="avatar">
+						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team4.jpg')}}" alt="team member">
+					</div>	
+					<div class="team-name">Madan Kapoor</div>
+					<div class="position">Leader</div>
+					<p>
+						 Leads the Project.Designed UI and backend
+					</p>
+					<div class="social_profiles">
+						<ul class="social-bookmarks">
+							<li class="facebook"><a href="">facebook</a></li>
+							<li class="flickr"><a href="">flickr</a></li>
+							<li class="linkedin"><a href="">linkedin</a></li>
+							<li class="twitter"><a href="">twitter</a></li>
+						</ul>
+					</div>	
+				</div>
+				<!-- end: About Member -->
+				
+				<hr class="clean visible-phone">
+				
+				<!-- start: About Member -->
+				<div class="span3">
+					<div class="avatar">
+						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team3.jpg')}}" alt="team member">
+					</div>	
+					<div class="team-name">Manit Kapoor</div>
+					<div class="position">UI designer</div>
+					<p>
+					  Designed UI and backend	 
+					</p>
+					<div class="social_profiles">
+						<ul class="social-bookmarks">
+							<li class="facebook"><a href="">facebook</a></li>
+							<li class="flickr"><a href="">flickr</a></li>
+							<li class="linkedin"><a href="#">linkedin</a></li>
+							<li class="twitter"><a href="#">twitter</a></li>
+						</ul>
+					</div>	
+				</div>
+				<!-- end: About Member -->
+				
+				<hr class="clean visible-phone">
+
+				<!-- start: About Member -->
+				<div class="span3">
+					<div class="avatar">
+						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team2.jpg')}}" alt="team member">
+					</div>	
+					<div class="team-name">Chandra Soodan</div>
+					<div class="position">Andriod App Developer</div>
+					<p>
+						Developed Andriod App for the Finance agent. 
+					</p>
+					<div class="social_profiles">
+						<ul class="social-bookmarks">
+							<li class="facebook"><a href="">facebook</a></li>
+							<li class="flickr"><a href="">flickr</a></li>
+							<li class="linkedin"><a href="#">linkedin</a></li>
+							<li class="twitter"><a href="#">twitter</a></li>
+						</ul>
+					</div>	
+				</div>
+				<!-- end: About Member -->
+				
+				<hr class="clean visible-phone">	
+			
+			</div>
+			<!-- end: Row -->
+
+		</div>
+		<!-- end: Team -->
+		
+	</div>	
+	
+</div>	
+<!-- end: Row -->
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 6th Page - Team -->
+	
+	<!-- start: 7th Page - Contact -->
+	<div id="mapBg"></div>
+	<div id="contact" class="color blue transparent">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+				
+	
+			<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+						<h2><span>Contact</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			
+			<!-- start: Row -->
+			<div class="row-fluid">		
+				
+				<div class="span12">
+					
+					<!-- start: Contact Info -->
+					<b>Velammal Engineering College</b> •
+					 Velammal Nagar, Ambattur-Red Hills Road •
+					 Chennai - 600 066, India •
+					 Phone:044 - 39666005 , 39666006, 39666007, 39666008 and 39666009•
+					Fax No:044 - 2659 1771• 
+					Email:velammal@velammal.edu.in•
+					HR Department  : career@velammal.edu.in•
+					Web: http://www.velammal.edu.in/	
+					<!-- end: Contact Info -->
+				
+				</div>	
+			
+			</div>
+			<!-- end: Row -->
+			
+			<hr class="clean">
+			
+			<!-- start: Row -->
+			<div class="row-fluid">		
+			
+				<!-- start: Map -->
+				<div class="span6">
+					
+					<!-- start: Contact Form -->
+					<div id="contact-form">
+
+						<form method="post" action="">
+							
+							<fieldset>
+								
+								<input tabindex="4" id="name" name="name" type="text" value="" class="span12" placeholder="Name: ..." >
+								<input tabindex="2" id="email" name="email" type="text" value="" class="span12" placeholder="Email: ...">
+								<input tabindex="3" id="www" name="www" type="text" value="" class="span12" placeholder="WWW: ...">
+								<textarea tabindex="3" class="input-xlarge span12" id="message" name="body" rows="7" placeholder="Message: ..."></textarea>
+
+								<div class="actions">
+									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Send message</button>
+								</div>
+								
+							</fieldset>
+
+						</form>
+
+					</div>
+					<!-- end: Contact Form -->
+					
+
+				</div>
+				<!-- end: Map -->
+				
+				<div class="span6">
+					
+					
+				
+				</div>	
+			
+			</div>
+			<!-- end: Row -->
+
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 7th Page - Contact -->
+
+	
+
+	<footer>
+		
+		<div id="copyright">
+			All investments are subjected to market risks.Please read carefull documents 
+		</div>
+		<div id="social">
+			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
+			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+			<a href="http://BootstrapMaster.com/feed/" rel="tooltip" title="RSS" class="rss">RSS</a>
+			<a href="#" rel="tooltip" title="Github" class="github">Github</a>
+			<a href="#" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+			<a href="#" rel="tooltip" title="Pintrest" class="pintrest">Pintrest</a>
+			<a href="#" rel="tooltip" title="Vimeo" class="vimeo">Vimeo</a>
+			<a href="#" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+		</div>	
+		
+	</footer>	
+	 <div id="chat-dialog" title="Basic dialog">
+		<form method="post" action="javascript:GetReply()" >
+		<div id= "chat-textarea" >
+		<div class="botreply">Guide: {{ botreply }}
+		</div>
+		</div><br>
+		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
+		<div class="chat-submit-container">
+		<input class="chat-submit-button" type="submit" value="Send" />
+	 </div>
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/isotope.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.imagesloaded.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/flexslider.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/carousel.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/fancybox.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/twitter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/modernizr.custom.79639.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.ba-cond.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.slitslider.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/excanvas.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.pie.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.stack.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.resize.min.js') }}"></script>
+
+<script defer="defer" src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+<script type="text/javascript">	
+	$(function() {
+		
+		var Page = (function() {
+
+			var $navArrows = $( '#nav-arrows' ),
+				$nav = $( '#nav-dots > span' ),
+				slitslider = $( '#slider' ).slitslider( {
+					onBeforeChange : function( slide, pos ) {
+
+						$nav.removeClass( 'nav-dot-current' );
+						$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+					}
+				} ),
+
+				init = function() {
+
+					initEvents();
+					
+				},
+				initEvents = function() {
+
+					// add navigation events
+					$navArrows.children( ':last' ).on( 'click', function() {
+
+						slitslider.next();
+						return false;
+
+					} );
+
+					$navArrows.children( ':first' ).on( 'click', function() {
+						
+						slitslider.previous();
+						return false;
+
+					} );
+
+					$nav.each( function( i ) {
+					
+						$( this ).on( 'click', function( event ) {
+							
+							var $dot = $( this );
+							
+							if( !slitslider.isActive() ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$dot.addClass( 'nav-dot-current' );
+							
+							}
+							
+							slitslider.jump( i + 1 );
+							return false;
+						
+						} );
+						
+					} );
+
+				};
+
+				return { init : init };
+
+		})();
+
+		Page.init();
+		$('#chat-Starter').click(
+				function() {
+					$( 
+					'#chat-dialog' ).dialog({					
+						minWidth:  1000 ,
+						draggable: true,
+						resizable: false,
+						title: "Finance Agent"
+					}).dialogExtend(
+						{
+							"closable" : false,
+							"maximizable" : true,
+							"minimizable" : true,
+							"collapsable" : true,
+							"dblclick" : "collapse",
+							"titlebar" : "transparent",
+							"minimizeLocation" : "left",
+							"icons" : {
+							  "close" : "ui-icon-close",
+							  "maximize" : "ui-icon-clipboard",
+							  "minimize" : "ui-icon-minus",
+							  "collapse" : "ui-icon-triangle-1-s",
+							  "restore" : " ui-icon-refresh"
+							}
+						}
+					);
+				}
+			
+			); 
+		
+	});
+</script>
+<!------javascript for chatting Agent-->
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.dialogextend.min.js') }}" ></script>
+<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/chatprocess.js') }}" ></script>
+<!-- end: Java Script -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Finance Agent</title> 
+	<!-- end: Meta -->
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery-ui.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chat.css') }}"/>
+	<!-- end: CSS -->
+</head>
+<body>
+<div id="chat-dialog" title="Basic dialog">
+		<form method="post" action="javascript:GetReply()" >
+		<div id= "chat-textarea" >
+		<div class="botreply">Guide: {{ botreply }}
+		</div>
+		</div><br>
+		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
+		<div class="chat-submit-container">
+		<input class="chat-submit-button" type="submit" value="Send" />
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.dialogextend.min.js') }}" ></script>
+<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/chatprocess.js') }}" ></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#chat-dialog' ).dialog({					
+							minWidth:  1000 ,
+							draggable: true,
+							resizable: false,
+							title: "Finance Agent"
+						    }).dialogExtend({
+								"closable" : false,
+								"maximizable" : false,
+								"minimizable" : true,
+								"collapsable" : true,
+								"dblclick" : "collapse",
+								"titlebar" : "transparent",
+								"minimizeLocation" : "left",
+								"icons" : {
+								  "close" : "ui-icon-close",
+								  "maximize" : "ui-icon-clipboard",
+								  "minimize" : "ui-icon-minus",
+								  "collapse" : "ui-icon-triangle-1-s",
+								  "restore" : " ui-icon-refresh"
+								}
+							});});
+</script>
+</body>
+</html>

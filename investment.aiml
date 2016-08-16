@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 10/5/2011 -->
+<!-- -->
+<category><pattern>WHAT IS INVESTING</pattern>
+<template>An item that is purchased with the hope that it will generate income or will appreciate in the future is investing.</template>
+</category>
+<category><pattern>WHAT IS INVESTMENT</pattern>
+<template>An investment is an asset or item that is purchased with the hope that it will generate income or will appreciate in the future</template>
+</category>
+<category><pattern>HOW TO INVEST MONEY</pattern>
+<template>Investment is always done based on your life goals.There are number of ways like real estates,mutual funds,equity etc..</template>
+</category>
+<category><pattern>HOW DO I INVEST MONEY</pattern>
+<template>Investment is always done based on your life goals.There are number of ways like real estates,mutual funds,equity etc..</template>
+</category>
+<category><pattern>HOW DO I INVEST MY MONEY</pattern>
+<template>Investment is always done based on your life goals.There are number of ways like real estates,mutual funds,equity etc..</template>
+</category>
+<category><pattern>HOW CAN I INVEST MY MONEY</pattern>
+<template>Investment is always done based on your life goals.There are number of ways like real estates,mutual funds,equity etc..</template>
+</category>
+<category><pattern>WHERE SHOULD I INVEST MONEY</pattern>
+<template>I don't know, are you a good investor? If not I would suggest Mutual funds</template>
+</category>
+<category><pattern>WHERE CAN I INVEST MONEY</pattern>
+<template>I don't know, are you a good investor? If not I would suggest Mutual funds</template>
+</category>
+<category><pattern>HOW CAN I BECOME RICH</pattern>
+<template>To be a good investor, you need good Education,Experience and some cash. Creating an asset is the best way I would say.For example Bill Gates created Microsoft, Larry Ellison created Oracle, Warren Buffet created Berkshire Hathaway. </template>
+</category>
+<category><pattern>HOW CAN I BECOME SUPER RICH</pattern>
+<template>To be a good investor, you need good Education,Experience and some cash. Creating an asset is the best way I would say.For example Bill Gates created Microsoft, Larry Ellison created Oracle, Warren Buffet created Berkshire Hathaway. </template>
+</category>
+<category><pattern>HOW CAN I BECOME VERY RICH</pattern>
+<template>To be a good investor, you need good Education,Experience and some cash. Creating an asset is the best way I would say.For example Bill Gates created Microsoft, Larry Ellison created Oracle, Warren Buffet created Berkshire Hathaway. </template>
+</category>
+<category><pattern>HOW CAN I BECOME A GOOD INVESTOR</pattern>
+<template>To be a good investor, you need good Education,Experience and some cash. Creating an asset is the best way I would say.For example Bill Gates created Microsoft, Larry Ellison created Oracle, Warren Buffet created Berkshire Hathaway. </template>
+</category>
+<category><pattern>WHAT ARE SOME WAYS TO INVEST MONEY</pattern>
+<template>Investment is always done based on your life goals.There are number of ways like real estates,mutual funds,equity etc..</template>
+</category>
+<category><pattern>HOW TO SAVE MONEY</pattern>
+<template>A good question follow some steps Record your expenses,Make a budget plan and then with saved money you can invest based on your goals.</template>
+</category>
+<category><pattern>HOW CAN I SAVE MONEY</pattern>
+<template>A good question follow some steps Record your expenses,Make a budget plan and then with saved money you can invest based on your goals.</template>
+</category>
+<category><pattern>HOW CAN I SAVE MY MONEY</pattern>
+<template>A good question follow some steps Record your expenses,Make a budget plan and then with saved money you can invest based on your goals.</template>
+</category>
+<category><pattern>HOW TO EARN MONEY</pattern>
+<template>Money can be earned through many ways, there is two types of income method.Direct method income comes from your job, bussiness etc.. Indirect method income comes from various assets of investing in various ways.</template>
+</category>
+</aiml>

@@ -1,0 +1,47 @@
+	{% extends "index2.html" %}
+	{% block content %}
+<!-- start: 5th Page - About -->
+	<div id="about" class="color black">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+						<h2><span>Register</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->				
+			{% from "_formhelpers.html" import render_field %}
+		     <div class="form_container">
+			  <form name="register_form" method="post" action="/register">
+			  	{{ form.hidden_tag() }}
+			  <h1>Register For An Account</h1>
+				<p>To sign-up for a account please provide us with some basic information using
+				the contact form below. Please use valid credentials.</p>
+				{{ render_field(form.username,placeholder="Name") }}
+				{{ render_field(form.email,placeholder="Email") }}
+			    {{ render_field(form.password,placeholder="Password") }}
+			    {{ render_field(form.confirm,placeholder="Confirm Password") }}
+			    {{ render_field(form.age,placeholder="Age") }}
+                <input type="submit" value="Register"> 				
+			  </form>
+              </div>			 
+			
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 5th Page - About -->
+	{% endblock %}

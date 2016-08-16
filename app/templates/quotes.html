@@ -1,0 +1,45 @@
+	{% extends "index3.html" %}
+	{% block content %}
+	<!-- start: 4th Page - Portfolio -->
+	<div id="portfolio" class="color white">
+		
+		<!--start: Container -->
+		<div class="container">
+	
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Life Quotes</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			
+			<!-- start: Flexslider -->
+			<div class="slider">
+				<div id="flex1" class="flexslider">
+					<ul class="slides">
+						
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider1.jpg')}}" alt="" /></div></li>
+
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider2.jpg')}}" alt="" /></div></li>
+
+						<li><div class="picture"><img src="{{ url_for('static', filename='assets/img/slider/slider3.jpg')}}" alt="" /></div></li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- end: Flexslider -->
+
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 4th Page - Portfolio -->
+		{% endblock %}
+ 
+ 

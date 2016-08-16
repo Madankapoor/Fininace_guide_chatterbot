@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Finance Agent</title> 
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- end: Mobile Specific -->
+	
+
+    <!-- start: CSS -->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/GoogleFonts.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery-ui.css')}}">
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider1.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider2.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/slider3.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/login_css.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='assets/css/register_formcss.css') }}" rel="stylesheet">
+	<!-- end: CSS -->
+
+
+</head>
+    <header>
+		
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="navigation"> 
+					<div class="navbar navbar-fixed-top">
+						<div class="navbar-inner">
+							<a class="btn btn-navbar btnOverlay" data-toggle="collapse" data-target=".nav-collapse">
+								menu
+							</a>
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+									<li><a href="/Home" class="home">Home</a></li>
+									<li><a href="/login" class="Login">Login</a></li>
+									<li><a href="/register" class="about">Register</a></li>
+									<li><a href="/team" class="team">Team</a></li>
+									<li><a href="/contact" class="contact">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>		
+			
+	</header>
+ 	
+    {% block content %}{% endblock %}
+ 
+ 	<footer>
+		
+		<div id="copyright">
+			All investments are subjected to market risks.Please read carefull documents 
+		</div>
+		<div id="social">
+			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
+			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+			<a href="http://BootstrapMaster.com/feed/" rel="tooltip" title="RSS" class="rss">RSS</a>
+			<a href="#" rel="tooltip" title="Github" class="github">Github</a>
+			<a href="#" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+			<a href="#" rel="tooltip" title="Pintrest" class="pintrest">Pintrest</a>
+			<a href="#" rel="tooltip" title="Vimeo" class="vimeo">Vimeo</a>
+			<a href="#" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+		</div>	
+		
+	</footer>	
+	 
+	
+	 <!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/isotope.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.imagesloaded.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/flexslider.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/carousel.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/fancybox.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/twitter.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/modernizr.custom.79639.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.ba-cond.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.slitslider.js') }}"></script>
+	
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/excanvas.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.pie.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.stack.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.flot.resize.min.js') }}"></script>
+	
+	<script defer="defer" src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+	<script type="text/javascript">	
+		$(function() {
+			
+			var Page = (function() {
+	
+				var $navArrows = $( '#nav-arrows' ),
+					$nav = $( '#nav-dots > span' ),
+					slitslider = $( '#slider' ).slitslider( {
+						onBeforeChange : function( slide, pos ) {
+	
+							$nav.removeClass( 'nav-dot-current' );
+							$nav.eq( pos ).addClass( 'nav-dot-current' );
+	
+						}
+					} ),
+	
+					init = function() {
+	
+						initEvents();
+						
+					},
+					initEvents = function() {
+	
+						// add navigation events
+						$navArrows.children( ':last' ).on( 'click', function() {
+	
+							slitslider.next();
+							return false;
+	
+						} );
+	
+						$navArrows.children( ':first' ).on( 'click', function() {
+							
+							slitslider.previous();
+							return false;
+	
+						} );
+	
+						$nav.each( function( i ) {
+						
+							$( this ).on( 'click', function( event ) {
+								
+								var $dot = $( this );
+								
+								if( !slitslider.isActive() ) {
+	
+									$nav.removeClass( 'nav-dot-current' );
+									$dot.addClass( 'nav-dot-current' );
+								
+								}
+								
+								slitslider.jump( i + 1 );
+								return false;
+							
+							} );
+							
+						} );
+	
+					};
+	
+					return { init : init };
+	
+			})();
+	
+			Page.init();
+			
+		});
+	</script>
+	<!------javascript for chatting Agent-->
+	<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+	<script src="{{ url_for('static', filename='assets/js/jquery.dialogextend.min.js') }}" ></script>
+	<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/chatprocess.js') }}" ></script>
+	<!-- end: Java Script -->
+</body>
+</html>
