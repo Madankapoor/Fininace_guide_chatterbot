@@ -1,18 +1,19 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt
-from forms import RegistrationForm , LoginForm
-from models import User
+from forms import RegistrationForm , LoginForm ,ContactForm
+from models import User,Message
 
 from flask_login import  login_required, login_user, logout_user, current_user
 
 @login_manager.user_loader
 def user_loader(user_id):
 	return User.query.get(user_id)
-    
+
+ 
 @app.route('/')
 @app.route('/Home')
 def index():
-    return render_template("Home.html",botreply="Hi, How can I help in your queries related to Investments ?")
+    return render_template("Home.html")
 
 
 
@@ -29,7 +30,7 @@ def login():
                 login_user(user, remember=True)
                 return redirect(url_for("chat"))
             else:
-            	flash("Please check your email Id or password as it is  incorrect.")
+            	flash("Please check your email Id or password as it is incorrect.")
         else:
         	flash("Please register as the entered Email ID doesn exists.")
     return render_template("login.html",form=form)
@@ -43,7 +44,7 @@ def logout():
     db.session.add(user)
     db.session.commit()
     logout_user()
-    return render_template("Home")
+    return redirect(url_for("index"))
 
 @app.route('/register',methods=['POST','GET'])
 def register():
@@ -52,7 +53,7 @@ def register():
     	user = User.query.get(form.email.data)
     	if user:
     		flash('Entered Email ID is already registered with us.')
-    		return ender_template('register.html', form=form)
+    		return render_template('register.html', form=form)
     	user=User(form.username.data,form.email.data,form.password.data,form.age.data)
     	db.session.add(user)
     	db.session.commit()
@@ -67,9 +68,15 @@ def team():
 	return render_template("team.html")
 
 
-@app.route('/contact')
+@app.route('/contact', methods=["GET", "POST"])
 def contact():
-	return render_template("contact.html")
+    form=ContactForm()
+    if form.validate_on_submit() and request.method ==  "POST":
+        db.session.add(Message(form.name.data,form.email.data,form.message.data))
+        db.session.commit()
+        flash('Your Message has been saved ,Thank you for contacting us.')
+        return redirect(url_for('home'))
+    return render_template("contact.html",form=form)
 
 
 @app.route('/chat')

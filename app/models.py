@@ -33,3 +33,18 @@ class User(db.Model):
     def get_id(self):
         return self.email  # python 2
         
+class Message(db.Model):
+    __tablename__ = "Messages"
+    name=db.Column(db.String(50))
+    email = db.Column(db.String(50),primary_key=True)
+    message = db.Column(db.String(200))
+    time = db.Column('Sent_on' , db.DateTime)
+    def __init__(self , name ,message):
+        self.name = name
+        self.email = email
+        self.message = message
+        self.time =datetime.utcnow()
+
+    
+    
+   

@@ -52,20 +52,19 @@
 			
 				<!-- start: Map -->
 				<div class="span6">
-					
+					{% from "_formhelpers.html" import render_field %}
 					<!-- start: Contact Form -->
 					<div id="contact-form">
 
-						<form method="post" action="">
+						<form method="post" action="contact">
 							
 							<fieldset>
 								
-								<input tabindex="4" id="name" name="name" type="text" value="" class="span12" placeholder="Name: ..." >
-								<input tabindex="2" id="email" name="email" type="text" value="" class="span12" placeholder="Email: ...">
-								<input tabindex="3" id="www" name="www" type="text" value="" class="span12" placeholder="WWW: ...">
-								<textarea tabindex="3" class="input-xlarge span12" id="message" name="body" rows="7" placeholder="Message: ..."></textarea>
 
-								<div class="actions">
+								{{ render_field(form.name,tabindex="4",class="span12",placeholder="Name: ...") }}
+				 				{{ render_field(form.email,tabindex="2",class="span12",placeholder="Email:...") }}
+								{{ render_field(form.message,tabindex="3",class="input-xlarge span12",placeholder="Message: ...",rows="7") }}	
+									<div class="actions">
 									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Send message</button>
 								</div>
 								

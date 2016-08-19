@@ -1,6 +1,4 @@
-	
-		 
-		 function GetReply(){
+ function GetReply(){
 	  var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	  if (xhttp.readyState == 4 && xhttp.status == 200) 
@@ -10,10 +8,10 @@
 		var reply=xhttp.responseText ;
 		var TextArea=document.getElementById("chat-textarea");
 		
-		arequest.innerHTML=document.getElementById("message_box").value;
-		breply.innerHTML=reply;
-		arequest.className="userrequest";
-		breply.className="botreply";
+		arequest.innerHTML="<div class='userrequest'>"+document.getElementById("message_box").value+"</div>";
+		breply.innerHTML="<div class='botreply'>"+reply+"</div>";
+		arequest.className="messageuser";
+		breply.className="messagebot";
 		TextArea.appendChild(arequest);
 		TextArea.appendChild(breply);
 		document.getElementById("message_box").value = ""
@@ -24,3 +22,5 @@
 	  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	  xhttp.send("message_box="+document.getElementById("message_box").value);
 	}	
+	
+	
