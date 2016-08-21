@@ -2,7 +2,8 @@ from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt
 from forms import RegistrationForm , LoginForm ,ContactForm
 from models import User,Message
-
+import chatprocess
+import random
 from flask_login import  login_required, login_user, logout_user, current_user
 
 @login_manager.user_loader
@@ -71,11 +72,12 @@ def team():
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     form=ContactForm(request.form)
-    if  request.method ==  "POST" and form.validate_on_submit() :
-        db.session.add(Message(form.name.data,form.email.data,form.message.data))
+    if  request.method ==  "POST" and form.validate() :
+        post_message=Message(form.name.data,form.email.data,form.message.data)
+        db.session.add(post_message)
         db.session.commit()
         flash('Your Message has been saved ,Thank you for contacting us.')
-        return redirect(url_for('contact'))
+        app.logger.info(post_message.id)
     return render_template("contact.html",form=form)
 
 
@@ -83,11 +85,12 @@ def contact():
 @login_required
 def chat():
 	user=current_user
-	return render_template('quotes.html',botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?")
+	History="chats/"+current_user.email+".html"
+	return render_template('quotes.html',task=History,botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?")
 	
 #route for mobile service
 @app.route('/replyalone',methods=['GET','POST'])
-def reply():
+def replyalone():
 	if request.cookies.get('SessionID'):
 		SessionID=request.cookies.get('SessionID')
 		if request.method == 'POST':
@@ -102,5 +105,32 @@ def reply():
 			sr=kernel.respond(request.args.get('message_box'))
 		resp = make_response(sr)
 		resp.set_cookie('SessionID', '1234')
-	
 	return resp
+
+@app.route('/reply',methods=['GET','POST'])
+@login_required
+def reply():
+    if request.method == 'POST':
+        userreply=request.form["message_box"]
+    else:
+        userreply=request.args.get('message_box')
+    sr=""
+    if request.cookies.get('SessionID'):
+        SessionID=request.cookies.get('SessionID')
+        sr=kernel.respond(userreply,SessionID)
+    else:
+        SessionID=str(random.randint(1,999999))
+        sr=kernel.respond(userreply)
+    
+    try:
+        resp = make_response(sr)
+        resp.set_cookie('SessionID',SessionID )
+        chatprocess.add(current_user.email,userreply,sr)
+        return resp
+
+    except:
+        if sr==null:
+            resp = make_response("Some error occured in bot Please try chatting again")
+        else:
+            resp = make_response("Some error occured Please try chatting again")
+        return resp

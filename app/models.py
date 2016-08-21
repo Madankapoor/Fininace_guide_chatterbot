@@ -40,11 +40,21 @@ class Message(db.Model):
     email = db.Column(db.String(50))
     message = db.Column(db.String(200))
     time = db.Column('Sent_on' , db.DateTime)
-    def __init__(self , name ,message):
+    def __init__(self , name ,email,message):
         self.name = name
         self.email = email
         self.message = message
         self.time =datetime.utcnow()
+    
+    @property
+    def is_active(self):
+        return True
 
+    @property
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return self.id  # python 2
     
    

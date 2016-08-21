@@ -35,7 +35,7 @@ function getTime()
 		$('#chat-textarea').animate({scrollTop: $('#chat-textarea').get(0).scrollHeight}, 500);
 	  }
 	 };
-	  xhttp.open("POST", "/replyalone", true);
+	  xhttp.open("POST", "/reply", true);
 	  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	  xhttp.send("message_box="+document.getElementById("message_box").value);
 	}	

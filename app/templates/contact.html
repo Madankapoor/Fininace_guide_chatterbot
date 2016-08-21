@@ -46,7 +46,7 @@
 				  {% if messages %}
 				    <ul>
 				    {% for message in messages %}
-				        <li ><h3 class="login_usrn">{{ message }}</h3> </li>
+				        <li ><h3 >{{ message }}</h3> </li>
 				    {% endfor %}
 				    </ul>
 				  {% endif %}
@@ -67,12 +67,12 @@
 					<div id="contact-form">
 
 						<form method="post" action="contact">
-							
+							{{ form.hidden_tag() }}
 							<fieldset>
 								{{ render_field(form.name,tabindex="4",class="span12",placeholder="Name: ...") }}
 				 				{{ render_field(form.email,tabindex="2",class="span12",placeholder="Email:...") }}
 								{{ render_field(form.message,tabindex="3",class="input-xlarge span12",placeholder="Message: ...",rows="7") }}	
-									<div class="actions">
+								<div class="actions">
 									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Send message</button>
 								</div>
 								

@@ -19,18 +19,10 @@ login_manager.init_app(app)
 
 login_manager.login_view = 'login'
 
-
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile = "bot_brain.brn")
 else:
     kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml b")
     kernel.saveBrain("bot_brain.brn")
 
-
-
 from app import views,models
-
-
-
-
-#Main index

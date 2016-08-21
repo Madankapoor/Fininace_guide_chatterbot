@@ -79,6 +79,9 @@
 	  <div id="chat-dialog" title="Basic dialog">
 		<form method="post" action="javascript:GetReply()" >
 		<div id= "chat-textarea" >
+		{% if task  %}
+        	{% include task %}
+    	{% endif %}	
 		<div class="botreply">Guide: {{ botreply }}
 		</div>
 		</div><br>
