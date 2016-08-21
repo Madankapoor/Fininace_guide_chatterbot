@@ -85,8 +85,14 @@ def contact():
 @login_required
 def chat():
 	user=current_user
+	Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
 	History="chats/"+current_user.email+".html"
-	return render_template('quotes.html',task=History,botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?")
+	try:
+	    return render_template('quotes.html',task=History)
+	except:
+	    chatprocess.reset(History,Botreply)
+	    return render_template('quotes.html',task=History)
+	    
 	
 #route for mobile service
 @app.route('/replyalone',methods=['GET','POST'])

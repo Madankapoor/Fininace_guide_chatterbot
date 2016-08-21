@@ -40,4 +40,7 @@ function getTime()
 	  xhttp.send("message_box="+document.getElementById("message_box").value);
 	}	
 	
-	
+	function chatclear()
+	{
+		document.getElementById("chat-textarea").innerHTML="";
+	}

@@ -679,6 +679,7 @@ int __pyx_module_is_main_Engine = 0;
 static const char __pyx_k_e[] = "e";
 static const char __pyx_k_p[] = "p";
 static const char __pyx_k_r[] = "r";
+static const char __pyx_k_br[] = "br";
 static const char __pyx_k_re[] = "re";
 static const char __pyx_k_add[] = "add";
 static const char __pyx_k_end[] = "end";
@@ -690,6 +691,7 @@ static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_email[] = "email";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_reply[] = "reply";
+static const char __pyx_k_reset[] = "reset";
 static const char __pyx_k_Engine[] = "Engine";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_getTime[] = "getTime";
@@ -700,6 +702,7 @@ static const char __pyx_k_strftime[] = "strftime";
 static const char __pyx_k_div_br_sub[] = "</div><br><sub>";
 static const char __pyx_k_I_M_p_d_m_Y[] = "%I:%M %p %d/%m/%Y";
 static const char __pyx_k_Using_write[] = "Using write";
+static const char __pyx_k_app_templates[] = "./app/templates/";
 static const char __pyx_k_File_not_found[] = "File not found";
 static const char __pyx_k_aSSIGN_COMPLETE[] = "aSSIGN COMPLETE";
 static const char __pyx_k_app_templates_chats[] = "./app/templates/chats/";
@@ -712,7 +715,9 @@ static PyObject *__pyx_kp_s_I_M_p_d_m_Y;
 static PyObject *__pyx_kp_s_Using_write;
 static PyObject *__pyx_kp_s_aSSIGN_COMPLETE;
 static PyObject *__pyx_n_s_add;
+static PyObject *__pyx_kp_s_app_templates;
 static PyObject *__pyx_kp_s_app_templates_chats;
+static PyObject *__pyx_n_s_br;
 static PyObject *__pyx_n_s_datetime;
 static PyObject *__pyx_kp_s_div_br_sub;
 static PyObject *__pyx_kp_s_div_class_messagebot_div_class;
@@ -733,15 +738,19 @@ static PyObject *__pyx_n_s_r;
 static PyObject *__pyx_n_s_re;
 static PyObject *__pyx_n_s_reply;
 static PyObject *__pyx_n_s_request;
+static PyObject *__pyx_n_s_reset;
 static PyObject *__pyx_n_s_strftime;
 static PyObject *__pyx_kp_s_sub_div;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_pf_6Engine_getTime(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_r, PyObject *__pyx_v_re); /* proto */
+static PyObject *__pyx_pf_6Engine_2reset(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_br); /* proto */
+static PyObject *__pyx_pf_6Engine_4add(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_r, PyObject *__pyx_v_re); /* proto */
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
+static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_codeobj__2;
 static PyObject *__pyx_codeobj__4;
+static PyObject *__pyx_codeobj__6;
 
 /* "Engine.pyx":4
  * import datetime
@@ -778,7 +787,7 @@ static PyObject *__pyx_pf_6Engine_getTime(CYTHON_UNUSED PyObject *__pyx_self) {
  * def getTime():
  *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")             # <<<<<<<<<<<<<<
  * 
- * 
+ * def reset(e,br):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_datetime); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
@@ -838,8 +847,252 @@ static PyObject *__pyx_pf_6Engine_getTime(CYTHON_UNUSED PyObject *__pyx_self) {
   return __pyx_r;
 }
 
-/* "Engine.pyx":8
+/* "Engine.pyx":7
+ *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")
  * 
+ * def reset(e,br):             # <<<<<<<<<<<<<<
+ *     e="./app/templates/"+e
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6Engine_3reset(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6Engine_3reset = {"reset", (PyCFunction)__pyx_pw_6Engine_3reset, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6Engine_3reset(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_e = 0;
+  PyObject *__pyx_v_br = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("reset (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_e,&__pyx_n_s_br,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_e)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_br)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("reset", 1, 2, 2, 1); __PYX_ERR(0, 7, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "reset") < 0)) __PYX_ERR(0, 7, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_e = values[0];
+    __pyx_v_br = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("reset", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 7, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("Engine.reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6Engine_2reset(__pyx_self, __pyx_v_e, __pyx_v_br);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6Engine_2reset(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_br) {
+  PyObject *__pyx_v_r = NULL;
+  FILE *__pyx_v_p;
+  CYTHON_UNUSED char *__pyx_v_email;
+  char *__pyx_v_reply;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  char *__pyx_t_5;
+  char const *__pyx_t_6;
+  int __pyx_t_7;
+  __Pyx_RefNannySetupContext("reset", 0);
+  __Pyx_INCREF(__pyx_v_e);
+
+  /* "Engine.pyx":8
+ * 
+ * def reset(e,br):
+ *     e="./app/templates/"+e             # <<<<<<<<<<<<<<
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ *     cdef FILE* p
+ */
+  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_app_templates, __pyx_v_e); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF_SET(__pyx_v_e, __pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "Engine.pyx":9
+ * def reset(e,br):
+ *     e="./app/templates/"+e
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"             # <<<<<<<<<<<<<<
+ *     cdef FILE* p
+ *     cdef char *email=e
+ */
+  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_div_class_messagebot_div_class, __pyx_v_br); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_div_br_sub); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_getTime); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (__pyx_t_4) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_sub_div); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_v_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+
+  /* "Engine.pyx":11
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ *     cdef FILE* p
+ *     cdef char *email=e             # <<<<<<<<<<<<<<
+ *     cdef char* reply=r
+ *     p=fopen(e, "w+")
+ */
+  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_v_email = __pyx_t_5;
+
+  /* "Engine.pyx":12
+ *     cdef FILE* p
+ *     cdef char *email=e
+ *     cdef char* reply=r             # <<<<<<<<<<<<<<
+ *     p=fopen(e, "w+")
+ *     if p==NULL:
+ */
+  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_r); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_v_reply = __pyx_t_5;
+
+  /* "Engine.pyx":13
+ *     cdef char *email=e
+ *     cdef char* reply=r
+ *     p=fopen(e, "w+")             # <<<<<<<<<<<<<<
+ *     if p==NULL:
+ *         print("File not found")
+ */
+  __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_v_p = fopen(__pyx_t_6, ((char const *)"w+"));
+
+  /* "Engine.pyx":14
+ *     cdef char* reply=r
+ *     p=fopen(e, "w+")
+ *     if p==NULL:             # <<<<<<<<<<<<<<
+ *         print("File not found")
+ *     else:
+ */
+  __pyx_t_7 = ((__pyx_v_p == NULL) != 0);
+  if (__pyx_t_7) {
+
+    /* "Engine.pyx":15
+ *     p=fopen(e, "w+")
+ *     if p==NULL:
+ *         print("File not found")             # <<<<<<<<<<<<<<
+ *     else:
+ *         fputs(reply,p)
+ */
+    if (__Pyx_PrintOne(0, __pyx_kp_s_File_not_found) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
+
+    /* "Engine.pyx":14
+ *     cdef char* reply=r
+ *     p=fopen(e, "w+")
+ *     if p==NULL:             # <<<<<<<<<<<<<<
+ *         print("File not found")
+ *     else:
+ */
+    goto __pyx_L3;
+  }
+
+  /* "Engine.pyx":17
+ *         print("File not found")
+ *     else:
+ *         fputs(reply,p)             # <<<<<<<<<<<<<<
+ *         fclose(p)
+ * 
+ */
+  /*else*/ {
+    fputs(__pyx_v_reply, __pyx_v_p);
+
+    /* "Engine.pyx":18
+ *     else:
+ *         fputs(reply,p)
+ *         fclose(p)             # <<<<<<<<<<<<<<
+ * 
+ * def add(e,r,re):
+ */
+    fclose(__pyx_v_p);
+  }
+  __pyx_L3:;
+
+  /* "Engine.pyx":7
+ *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")
+ * 
+ * def reset(e,br):             # <<<<<<<<<<<<<<
+ *     e="./app/templates/"+e
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("Engine.reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_r);
+  __Pyx_XDECREF(__pyx_v_e);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "Engine.pyx":20
+ *         fclose(p)
  * 
  * def add(e,r,re):             # <<<<<<<<<<<<<<
  *     e="./app/templates/chats/"+e+".html"
@@ -847,9 +1100,9 @@ static PyObject *__pyx_pf_6Engine_getTime(CYTHON_UNUSED PyObject *__pyx_self) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Engine_3add(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6Engine_3add = {"add", (PyCFunction)__pyx_pw_6Engine_3add, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6Engine_3add(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Engine_5add(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6Engine_5add = {"add", (PyCFunction)__pyx_pw_6Engine_5add, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6Engine_5add(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_e = 0;
   PyObject *__pyx_v_r = 0;
   PyObject *__pyx_v_re = 0;
@@ -877,16 +1130,16 @@ static PyObject *__pyx_pw_6Engine_3add(PyObject *__pyx_self, PyObject *__pyx_arg
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_r)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, 1); __PYX_ERR(0, 8, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, 1); __PYX_ERR(0, 20, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_re)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, 2); __PYX_ERR(0, 8, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, 2); __PYX_ERR(0, 20, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add") < 0)) __PYX_ERR(0, 8, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add") < 0)) __PYX_ERR(0, 20, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -901,20 +1154,20 @@ static PyObject *__pyx_pw_6Engine_3add(PyObject *__pyx_self, PyObject *__pyx_arg
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 8, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("add", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 20, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("Engine.add", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Engine_2add(__pyx_self, __pyx_v_e, __pyx_v_r, __pyx_v_re);
+  __pyx_r = __pyx_pf_6Engine_4add(__pyx_self, __pyx_v_e, __pyx_v_r, __pyx_v_re);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_r, PyObject *__pyx_v_re) {
+static PyObject *__pyx_pf_6Engine_4add(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_e, PyObject *__pyx_v_r, PyObject *__pyx_v_re) {
   FILE *__pyx_v_p;
   CYTHON_UNUSED char *__pyx_v_email;
   char *__pyx_v_request;
@@ -933,34 +1186,34 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
   __Pyx_INCREF(__pyx_v_r);
   __Pyx_INCREF(__pyx_v_re);
 
-  /* "Engine.pyx":9
+  /* "Engine.pyx":21
  * 
  * def add(e,r,re):
  *     e="./app/templates/chats/"+e+".html"             # <<<<<<<<<<<<<<
  *     r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"
  *     re="<div class='messagebot'><div class='botreply'>"+re+"</div><br><sub>"+getTime()+"</sub></div>"
  */
-  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_app_templates_chats, __pyx_v_e); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_app_templates_chats, __pyx_v_e); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_html); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_html); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_e, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Engine.pyx":10
+  /* "Engine.pyx":22
  * def add(e,r,re):
  *     e="./app/templates/chats/"+e+".html"
  *     r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"             # <<<<<<<<<<<<<<
  *     re="<div class='messagebot'><div class='botreply'>"+re+"</div><br><sub>"+getTime()+"</sub></div>"
  *     cdef FILE* p
  */
-  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_div_class_messageuser_div_class, __pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_div_class_messageuser_div_class, __pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_div_br_sub); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_div_br_sub); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_getTime); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_getTime); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -973,36 +1226,36 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
     }
   }
   if (__pyx_t_4) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_sub_div); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_sub_div); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF_SET(__pyx_v_r, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Engine.pyx":11
+  /* "Engine.pyx":23
  *     e="./app/templates/chats/"+e+".html"
  *     r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"
  *     re="<div class='messagebot'><div class='botreply'>"+re+"</div><br><sub>"+getTime()+"</sub></div>"             # <<<<<<<<<<<<<<
  *     cdef FILE* p
  *     cdef char *email=e
  */
-  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_div_class_messagebot_div_class, __pyx_v_re); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_div_class_messagebot_div_class, __pyx_v_re); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_div_br_sub); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_div_br_sub); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_getTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_getTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -1015,73 +1268,73 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
     }
   }
   if (__pyx_t_4) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_sub_div); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_sub_div); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_re, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Engine.pyx":13
+  /* "Engine.pyx":25
  *     re="<div class='messagebot'><div class='botreply'>"+re+"</div><br><sub>"+getTime()+"</sub></div>"
  *     cdef FILE* p
  *     cdef char *email=e             # <<<<<<<<<<<<<<
  *     cdef char* request=r
  *     cdef char* reply=re
  */
-  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 25, __pyx_L1_error)
   __pyx_v_email = __pyx_t_5;
 
-  /* "Engine.pyx":14
+  /* "Engine.pyx":26
  *     cdef FILE* p
  *     cdef char *email=e
  *     cdef char* request=r             # <<<<<<<<<<<<<<
  *     cdef char* reply=re
  *     print("aSSIGN COMPLETE")
  */
-  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_r); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_r); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 26, __pyx_L1_error)
   __pyx_v_request = __pyx_t_5;
 
-  /* "Engine.pyx":15
+  /* "Engine.pyx":27
  *     cdef char *email=e
  *     cdef char* request=r
  *     cdef char* reply=re             # <<<<<<<<<<<<<<
  *     print("aSSIGN COMPLETE")
  *     p = fopen(e, "a")
  */
-  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_re); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsString(__pyx_v_re); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 27, __pyx_L1_error)
   __pyx_v_reply = __pyx_t_5;
 
-  /* "Engine.pyx":16
+  /* "Engine.pyx":28
  *     cdef char* request=r
  *     cdef char* reply=re
  *     print("aSSIGN COMPLETE")             # <<<<<<<<<<<<<<
  *     p = fopen(e, "a")
  *     if p == NULL:
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_aSSIGN_COMPLETE) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_aSSIGN_COMPLETE) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
 
-  /* "Engine.pyx":17
+  /* "Engine.pyx":29
  *     cdef char* reply=re
  *     print("aSSIGN COMPLETE")
  *     p = fopen(e, "a")             # <<<<<<<<<<<<<<
  *     if p == NULL:
  *         print("Using write")
  */
-  __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 29, __pyx_L1_error)
   __pyx_v_p = fopen(__pyx_t_6, ((char const *)"a"));
 
-  /* "Engine.pyx":18
+  /* "Engine.pyx":30
  *     print("aSSIGN COMPLETE")
  *     p = fopen(e, "a")
  *     if p == NULL:             # <<<<<<<<<<<<<<
@@ -1091,26 +1344,26 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
   __pyx_t_7 = ((__pyx_v_p == NULL) != 0);
   if (__pyx_t_7) {
 
-    /* "Engine.pyx":19
+    /* "Engine.pyx":31
  *     p = fopen(e, "a")
  *     if p == NULL:
  *         print("Using write")             # <<<<<<<<<<<<<<
  *         p=fopen(e,"w")
  *     if p== NULL:
  */
-    if (__Pyx_PrintOne(0, __pyx_kp_s_Using_write) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_kp_s_Using_write) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
 
-    /* "Engine.pyx":20
+    /* "Engine.pyx":32
  *     if p == NULL:
  *         print("Using write")
  *         p=fopen(e,"w")             # <<<<<<<<<<<<<<
  *     if p== NULL:
  *         print("File not found")
  */
-    __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 20, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_e); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
     __pyx_v_p = fopen(__pyx_t_6, ((char const *)"w"));
 
-    /* "Engine.pyx":18
+    /* "Engine.pyx":30
  *     print("aSSIGN COMPLETE")
  *     p = fopen(e, "a")
  *     if p == NULL:             # <<<<<<<<<<<<<<
@@ -1119,7 +1372,7 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
  */
   }
 
-  /* "Engine.pyx":21
+  /* "Engine.pyx":33
  *         print("Using write")
  *         p=fopen(e,"w")
  *     if p== NULL:             # <<<<<<<<<<<<<<
@@ -1129,16 +1382,16 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
   __pyx_t_7 = ((__pyx_v_p == NULL) != 0);
   if (__pyx_t_7) {
 
-    /* "Engine.pyx":22
+    /* "Engine.pyx":34
  *         p=fopen(e,"w")
  *     if p== NULL:
  *         print("File not found")             # <<<<<<<<<<<<<<
  *     else:
  *         print("Using write")
  */
-    if (__Pyx_PrintOne(0, __pyx_kp_s_File_not_found) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_kp_s_File_not_found) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
 
-    /* "Engine.pyx":21
+    /* "Engine.pyx":33
  *         print("Using write")
  *         p=fopen(e,"w")
  *     if p== NULL:             # <<<<<<<<<<<<<<
@@ -1148,7 +1401,7 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
     goto __pyx_L4;
   }
 
-  /* "Engine.pyx":24
+  /* "Engine.pyx":36
  *         print("File not found")
  *     else:
  *         print("Using write")             # <<<<<<<<<<<<<<
@@ -1156,9 +1409,9 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
  *         fputs(reply,p)
  */
   /*else*/ {
-    if (__Pyx_PrintOne(0, __pyx_kp_s_Using_write) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_kp_s_Using_write) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
 
-    /* "Engine.pyx":25
+    /* "Engine.pyx":37
  *     else:
  *         print("Using write")
  *         fputs(request,p)             # <<<<<<<<<<<<<<
@@ -1167,7 +1420,7 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
  */
     fputs(__pyx_v_request, __pyx_v_p);
 
-    /* "Engine.pyx":26
+    /* "Engine.pyx":38
  *         print("Using write")
  *         fputs(request,p)
  *         fputs(reply,p)             # <<<<<<<<<<<<<<
@@ -1176,7 +1429,7 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
  */
     fputs(__pyx_v_reply, __pyx_v_p);
 
-    /* "Engine.pyx":27
+    /* "Engine.pyx":39
  *         fputs(request,p)
  *         fputs(reply,p)
  *         fclose(p)             # <<<<<<<<<<<<<<
@@ -1187,8 +1440,8 @@ static PyObject *__pyx_pf_6Engine_2add(CYTHON_UNUSED PyObject *__pyx_self, PyObj
   }
   __pyx_L4:;
 
-  /* "Engine.pyx":8
- * 
+  /* "Engine.pyx":20
+ *         fclose(p)
  * 
  * def add(e,r,re):             # <<<<<<<<<<<<<<
  *     e="./app/templates/chats/"+e+".html"
@@ -1243,7 +1496,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Using_write, __pyx_k_Using_write, sizeof(__pyx_k_Using_write), 0, 0, 1, 0},
   {&__pyx_kp_s_aSSIGN_COMPLETE, __pyx_k_aSSIGN_COMPLETE, sizeof(__pyx_k_aSSIGN_COMPLETE), 0, 0, 1, 0},
   {&__pyx_n_s_add, __pyx_k_add, sizeof(__pyx_k_add), 0, 0, 1, 1},
+  {&__pyx_kp_s_app_templates, __pyx_k_app_templates, sizeof(__pyx_k_app_templates), 0, 0, 1, 0},
   {&__pyx_kp_s_app_templates_chats, __pyx_k_app_templates_chats, sizeof(__pyx_k_app_templates_chats), 0, 0, 1, 0},
+  {&__pyx_n_s_br, __pyx_k_br, sizeof(__pyx_k_br), 0, 0, 1, 1},
   {&__pyx_n_s_datetime, __pyx_k_datetime, sizeof(__pyx_k_datetime), 0, 0, 1, 1},
   {&__pyx_kp_s_div_br_sub, __pyx_k_div_br_sub, sizeof(__pyx_k_div_br_sub), 0, 0, 1, 0},
   {&__pyx_kp_s_div_class_messagebot_div_class, __pyx_k_div_class_messagebot_div_class, sizeof(__pyx_k_div_class_messagebot_div_class), 0, 0, 1, 0},
@@ -1264,6 +1519,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_re, __pyx_k_re, sizeof(__pyx_k_re), 0, 0, 1, 1},
   {&__pyx_n_s_reply, __pyx_k_reply, sizeof(__pyx_k_reply), 0, 0, 1, 1},
   {&__pyx_n_s_request, __pyx_k_request, sizeof(__pyx_k_request), 0, 0, 1, 1},
+  {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
   {&__pyx_n_s_strftime, __pyx_k_strftime, sizeof(__pyx_k_strftime), 0, 0, 1, 1},
   {&__pyx_kp_s_sub_div, __pyx_k_sub_div, sizeof(__pyx_k_sub_div), 0, 0, 1, 0},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
@@ -1282,7 +1538,7 @@ static int __Pyx_InitCachedConstants(void) {
  * def getTime():
  *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")             # <<<<<<<<<<<<<<
  * 
- * 
+ * def reset(e,br):
  */
   __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_I_M_p_d_m_Y); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
@@ -1297,17 +1553,29 @@ static int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_app_chatp, __pyx_n_s_getTime, 4, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 4, __pyx_L1_error)
 
-  /* "Engine.pyx":8
+  /* "Engine.pyx":7
+ *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")
  * 
+ * def reset(e,br):             # <<<<<<<<<<<<<<
+ *     e="./app/templates/"+e
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ */
+  __pyx_tuple__3 = PyTuple_Pack(6, __pyx_n_s_e, __pyx_n_s_br, __pyx_n_s_r, __pyx_n_s_p, __pyx_n_s_email, __pyx_n_s_reply); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__3);
+  __Pyx_GIVEREF(__pyx_tuple__3);
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_app_chatp, __pyx_n_s_reset, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 7, __pyx_L1_error)
+
+  /* "Engine.pyx":20
+ *         fclose(p)
  * 
  * def add(e,r,re):             # <<<<<<<<<<<<<<
  *     e="./app/templates/chats/"+e+".html"
  *     r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"
  */
-  __pyx_tuple__3 = PyTuple_Pack(7, __pyx_n_s_e, __pyx_n_s_r, __pyx_n_s_re, __pyx_n_s_p, __pyx_n_s_email, __pyx_n_s_request, __pyx_n_s_reply); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 8, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__3);
-  __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_app_chatp, __pyx_n_s_add, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(7, __pyx_n_s_e, __pyx_n_s_r, __pyx_n_s_re, __pyx_n_s_p, __pyx_n_s_email, __pyx_n_s_request, __pyx_n_s_reply); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__5);
+  __Pyx_GIVEREF(__pyx_tuple__5);
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_app_chatp, __pyx_n_s_add, 20, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1437,16 +1705,28 @@ PyMODINIT_FUNC PyInit_Engine(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_getTime, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Engine.pyx":8
+  /* "Engine.pyx":7
+ *     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")
  * 
+ * def reset(e,br):             # <<<<<<<<<<<<<<
+ *     e="./app/templates/"+e
+ *     r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+ */
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Engine_3reset, NULL, __pyx_n_s_Engine); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_reset, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "Engine.pyx":20
+ *         fclose(p)
  * 
  * def add(e,r,re):             # <<<<<<<<<<<<<<
  *     e="./app/templates/chats/"+e+".html"
  *     r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Engine_3add, NULL, __pyx_n_s_Engine); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Engine_5add, NULL, __pyx_n_s_Engine); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_add, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_add, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "Engine.pyx":1

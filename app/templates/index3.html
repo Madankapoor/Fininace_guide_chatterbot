@@ -82,11 +82,10 @@
 		{% if task  %}
         	{% include task %}
     	{% endif %}	
-		<div class="botreply">Guide: {{ botreply }}
-		</div>
-		</div><br>
+    	</div><br>
 		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
 		<div class="chat-submit-container">
+		<input class="chat-submit-button" type="button" value="clear" onclick="chatclear()"/>
 		<input class="chat-submit-button" type="submit" value="Send" />
 	 </div>
 	 <!-- start: Java Script -->
@@ -203,7 +202,8 @@
 							}
 						}
 					);
-			
+					
+			$('#chat-textarea').animate({scrollTop: $('#chat-textarea').get(0).scrollHeight}, 500);	
 		});
 		
 			var Plook=true;	
