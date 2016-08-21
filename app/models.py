@@ -1,5 +1,5 @@
 from app import db
-from datetime import datetime, timedelta
+from datetime import datetime
 
 class User(db.Model):
     __tablename__ = "users"
@@ -35,8 +35,9 @@ class User(db.Model):
         
 class Message(db.Model):
     __tablename__ = "Messages"
+    id= db.Column(db.Integer,primary_key=True,autoincrement=True)
     name=db.Column(db.String(50))
-    email = db.Column(db.String(50),primary_key=True)
+    email = db.Column(db.String(50))
     message = db.Column(db.String(200))
     time = db.Column('Sent_on' , db.DateTime)
     def __init__(self , name ,message):
@@ -45,6 +46,5 @@ class Message(db.Model):
         self.message = message
         self.time =datetime.utcnow()
 
-    
     
    

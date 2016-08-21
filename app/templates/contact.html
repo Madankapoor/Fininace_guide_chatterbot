@@ -17,7 +17,7 @@
 
 				<div id="page-title-inner">
 
-						<h2><span>Contact</span></h2>
+						<h2><span>Contact Us</span></h2>
 
 				</div>	
 
@@ -39,9 +39,19 @@
 					HR Department  : career@velammal.edu.in•
 					Web: http://www.velammal.edu.in/	
 					<!-- end: Contact Info -->
-				
-				</div>	
-			
+					
+				</div>
+				<div class="span12">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    <ul>
+				    {% for message in messages %}
+				        <li ><h3 class="login_usrn">{{ message }}</h3> </li>
+				    {% endfor %}
+				    </ul>
+				  {% endif %}
+				{% endwith %}
+				</div>
 			</div>
 			<!-- end: Row -->
 			
@@ -59,8 +69,6 @@
 						<form method="post" action="contact">
 							
 							<fieldset>
-								
-
 								{{ render_field(form.name,tabindex="4",class="span12",placeholder="Name: ...") }}
 				 				{{ render_field(form.email,tabindex="2",class="span12",placeholder="Email:...") }}
 								{{ render_field(form.message,tabindex="3",class="input-xlarge span12",placeholder="Message: ...",rows="7") }}	

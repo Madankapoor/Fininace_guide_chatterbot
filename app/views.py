@@ -70,12 +70,12 @@ def team():
 
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
-    form=ContactForm()
-    if form.validate_on_submit() and request.method ==  "POST":
+    form=ContactForm(request.form)
+    if  request.method ==  "POST" and form.validate_on_submit() :
         db.session.add(Message(form.name.data,form.email.data,form.message.data))
         db.session.commit()
         flash('Your Message has been saved ,Thank you for contacting us.')
-        return redirect(url_for('home'))
+        return redirect(url_for('contact'))
     return render_template("contact.html",form=form)
 
 
@@ -83,7 +83,7 @@ def contact():
 @login_required
 def chat():
 	user=current_user
-	return render_template('quotes.html',botreply="Hi, How can I help in your queries related to Investments ?")
+	return render_template('quotes.html',botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?")
 	
 #route for mobile service
 @app.route('/replyalone',methods=['GET','POST'])
@@ -102,4 +102,5 @@ def reply():
 			sr=kernel.respond(request.args.get('message_box'))
 		resp = make_response(sr)
 		resp.set_cookie('SessionID', '1234')
+	
 	return resp
