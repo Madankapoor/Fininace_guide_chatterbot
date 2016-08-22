@@ -86,12 +86,21 @@ def contact():
 def chat():
 	user=current_user
 	Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
-	History="chats/"+current_user.email+".html"
+	
+	
+	Greeting={'type':'bot','text':Botreply,'time':chatprocess.getTime()}
+	
 	try:
-	    return render_template('quotes.html',task=History)
+	    
+	    TextMessages=chatprocess.GetMessages(user.email)
+	    #print(TextMessages)
+	    TextMessages.append(Greeting)
+	    return render_template('quotes.html',messages=TextMessages)
 	except:
-	    chatprocess.reset(History,Botreply)
-	    return render_template('quotes.html',task=History)
+	    
+	    chatprocess.reset(user.email,Botreply)
+	    TextMessages=chatprocess.GetMessages(user.email)
+	    return render_template('quotes.html',messages=TextMessages)
 	    
 	
 #route for mobile service

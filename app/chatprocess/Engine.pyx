@@ -1,12 +1,12 @@
-from libc.stdio cimport fopen,fclose,FILE,fputs
+from libc.stdio cimport fopen,fclose,FILE,fputs,fgets
 import datetime
 
 def getTime():
     return datetime.datetime.now().strftime("%I:%M %p %d/%m/%Y")
 
 def reset(e,br):
-    e="./app/templates/"+e
-    r="<div class='messagebot'><div class='botreply'>"+br+"</div><br><sub>"+getTime()+"</sub></div>"
+    e="./app/templates/chat/"+e+".html"
+    r="bot\n"+br+"\n"+getTime()+"\n"
     cdef FILE* p
     cdef char *email=e
     cdef char* reply=r
@@ -19,8 +19,8 @@ def reset(e,br):
     
 def add(e,r,re):
     e="./app/templates/chats/"+e+".html"
-    r="<div class='messageuser'><div class='userrequest'>"+r+"</div><br><sub>"+getTime()+"</sub></div>"
-    re="<div class='messagebot'><div class='botreply'>"+re+"</div><br><sub>"+getTime()+"</sub></div>"
+    r="user\n"+r+"\n"+getTime()+"\n"
+    re="bot\n"+re+"\n"+getTime()+"\n"
     cdef FILE* p
     cdef char *email=e
     cdef char* request=r
@@ -37,7 +37,30 @@ def add(e,r,re):
         fputs(request,p)
         fputs(reply,p)
         fclose(p)
-
-
+    
+def GetMessages(e):
+    e="./app/templates/chats/"+e+".html"
+    cdef FILE* p
+    cdef char st[1000];
+    cdef char* s;
+    result=[]
+    
+    p = fopen(e, "r")
+    
+    if p ==NULL:
+        return result
+    s=fgets(st,999,p)
+    while s!= NULL:
+        message={}
+        message['type']=s
+        s=fgets(st,999,p)
+        message['text']=s
+        s=fgets(st,999,p)
+        message['time']=s
+        result.append(message)
+        s=fgets(st,999,p)
+        
+    return result
+    
 
     

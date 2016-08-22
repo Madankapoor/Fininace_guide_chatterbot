@@ -10,3 +10,29 @@
   {% endif %}
   
 {% endmacro %}
+
+{% macro render_message(message) %}
+  
+  {% if message['type'] =='bot\n' %}
+  <div class='messagebot'>
+    <div class='botreply'>
+    {{  message.text }}
+    </div><br>
+      <sub> 
+      {{  message.time }} 
+      </sub>
+  </div>
+  {% endif %}
+  
+  {% if message['type'] =='user\n' %}
+  <div class='messageuser'>
+    <div class='userrequest'>
+      {{ message.text }}
+    </div>
+    <br>
+    <sub>
+       {{  message.time }} 
+    </sub>
+  </div>
+  {% endif %}
+{% endmacro %}

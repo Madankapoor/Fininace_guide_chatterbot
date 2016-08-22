@@ -21,8 +21,6 @@
 	<link href="{{ url_for('static', filename='assets/css/slider1.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='assets/css/slider2.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='assets/css/slider3.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='assets/css/login_css.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='assets/css/register_formcss.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chat.css') }}"/>
 	<!-- end: CSS -->
 
@@ -41,11 +39,11 @@
 							</a>
 							<div class="nav-collapse collapse">
 								<ul class="nav">
-									<li><a  id="Homea" class="home">Home</a></li>
+									<li><a   id="Homea" class="home">Home</a></li>
 									<li><a  href="/logout" class="Login">Logout</a></li>
 									<li><a  id="quotesa" class="about">quotes</a></li>
-									<li><a  id="teama" class="team">Team</a></li>
-									<li><a  id="contacta" class="contact">Contact</a></li>
+									<li><a id="teama" class="team">Team</a></li>
+									<li><a id="contacta" class="contact">Contact</a></li>
 								</ul>
 							</div>
 						</div>
@@ -58,6 +56,58 @@
 	
 	{% block content %}{% endblock %}
 
+		<div id="home" style="display:hidden">
+
+		<div class="demo-1">
+
+	        <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+
+					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="FA"></div>
+							<h2>A Finance Agent</h2>
+							<blockquote><p>An agent for your life to help you achieve what you want in life.</p><cite>Your helper</cite></blockquote>
+						</div>
+					</div>
+
+					<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="MF"></div>
+							<h2>Mutual Funds</h2>
+							<blockquote><p>Well have less knowledge and less time to look upon your money. Special Fund managers will handle your money</p></blockquote>
+						</div>
+					</div>
+
+					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="deco" data-icon="P"></div>
+							<h2>Real Estates</h2>
+							<blockquote><p>Our bots will guide you to invest in various real estates.</p><cite>Dive in Real Estate</cite></blockquote>
+						</div>
+					</div>
+
+					
+				</div><!-- /sl-slider -->
+
+				<nav id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</nav>
+
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+				</nav>
+
+			</div><!-- /slider-wrapper -->
+
+	    </div>
+
+	</div>
+	<!-- end: 1st Page - Home -->
 	
 		<footer>
 		
@@ -79,9 +129,11 @@
 	  <div id="chat-dialog" title="Basic dialog">
 		<form method="post" action="javascript:GetReply()" >
 		<div id= "chat-textarea" >
-		{% if task  %}
-        	{% include task %}
-    	{% endif %}	
+		{% from "_formhelpers.html" import render_message %}
+        {% for x in messages %}
+        	{{ render_message(x)  }}
+        {% endfor %}
+    	
     	</div><br>
 		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
 		<div class="chat-submit-container">
