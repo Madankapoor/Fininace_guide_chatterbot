@@ -39,11 +39,11 @@
 							</a>
 							<div class="nav-collapse collapse">
 								<ul class="nav">
-									<li onclick="loadsauto('home')"><a   id="Homea" class="home" >Home</a></li>
+									<li ><a   href="/chathome" id="Homea" class="home" >Home</a></li>
 									<li><a  href="/logout" class="Login" >Logout</a></li>
-									<li onclick="loadsauto('quotesr')"><a  id="quotesa" class="about" >quotes</a></li>
-									<li onclick="loadsauto('teamr')"><a id="teama" class="team" >Team</a></li>
-									<li onclick="loadsauto('contact')"><a id="contacta" class="contact" >Contact</a></li>
+									<li ><a href="/chat" id="quotesa" class="about" >quotes</a></li>
+									<li ><a href="/chatteam"id="teama" class="team" >Team</a></li>
+									<li ><a href="/contactform" class="contact" >Contact</a></li>
 								</ul>
 							</div>
 						</div>
@@ -53,212 +53,18 @@
 		</div>		
 			
 	</header>
-	{% block content %}{% endblock %}
-		<div id="home" style="display:none;">
 
-		<div class="demo-1">
+{% block content %}{% endblock %}
 
-	        <div id="slider" class="sl-slider-wrapper">
 
-				<div class="sl-slider">
-
-					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner">
-							<div class="deco" data-icon="FA"></div>
-							<h2>A Finance Agent</h2>
-							<blockquote><p>An agent for your life to help you achieve what you want in life.</p><cite>Your helper</cite></blockquote>
-						</div>
-					</div>
-
-					<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-						<div class="sl-slide-inner">
-							<div class="deco" data-icon="MF"></div>
-							<h2>Mutual Funds</h2>
-							<blockquote><p>Well have less knowledge and less time to look upon your money. Special Fund managers will handle your money</p></blockquote>
-						</div>
-					</div>
-
-					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-						<div class="sl-slide-inner">
-							<div class="deco" data-icon="P"></div>
-							<h2>Real Estates</h2>
-							<blockquote><p>Our bots will guide you to invest in various real estates.</p><cite>Dive in Real Estate</cite></blockquote>
-						</div>
-					</div>
-
-					
-				</div><!-- /sl-slider -->
-
-				<nav id="nav-arrows" class="nav-arrows">
-					<span class="nav-arrow-prev">Previous</span>
-					<span class="nav-arrow-next">Next</span>
-				</nav>
-
-				<nav id="nav-dots" class="nav-dots">
-					<span class="nav-dot-current"></span>
-					<span></span>
-					<span></span>
-				</nav>
-
-			</div><!-- /slider-wrapper -->
-
-	    </div>
-
-	</div>
-		<!-- end: 1st Page - Home -->
-<div id="teamr" style="display:none;">
-
-	<div id="team" class="color white">
-		
-		<!--start: Container -->
-		<div class="container">
-
-			<!--start: Wrapper -->
-			<div class="wrapper span12">
-
-				<!-- start: Page Title -->
-<div id="page-title">
-
-	<div id="page-title-inner">
-
-			<h2><span>Team</span></h2>
-
-	</div>	
-
-</div>
-<!-- end: Page Title -->				
-
-<!-- start: Row -->
-<div class="row-fluid" >
-	
-	<div class ="span12">
-		
-		<!-- start: Team -->	
-		<div id="team">
-						
-			<!-- start: Row -->
-			<div class="row-fluid">
-			
-				<!-- start: About Member -->
-				<div class="span3">
-					<div class="avatar">
-						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team1.jpg')}}" alt="team member">
-					</div>	
-					<div class="team-name">Shaik Shahrukh</div>
-					<div class="position"> Coordinator</div>
-					<p>
-						 Project Coordinator ,tester ,marketing and content incharge. 
-					</p>
-					<div class="social_profiles">
-						<ul class="social-bookmarks">
-							<li class="facebook"><a href="">facebook</a></li>
-							<li class="flickr"><a href="">flickr</a></li>
-							<li class="linkedin"><a href="#">linkedin</a></li>
-							<li class="twitter"><a href="#">twitter</a></li>
-						</ul>
-					</div>	
-				</div>
-			
-				
-				
-				<hr class="clean visible-phone">
-
-				<!-- start: About Member -->
-				<div class="span3">
-					<div class="avatar">
-						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team4.jpg')}}" alt="team member">
-					</div>	
-					<div class="team-name">Madan Kapoor</div>
-					<div class="position">Leader</div>
-					<p>
-						 Leads the Project.Designed UI and backend
-					</p>
-					<div class="social_profiles">
-						<ul class="social-bookmarks">
-							<li class="facebook"><a href="">facebook</a></li>
-							<li class="flickr"><a href="">flickr</a></li>
-							<li class="linkedin"><a href="">linkedin</a></li>
-							<li class="twitter"><a href="">twitter</a></li>
-						</ul>
-					</div>	
-				</div>
-				<!-- end: About Member -->
-				
-				<hr class="clean visible-phone">
-				
-				<!-- start: About Member -->
-				<div class="span3">
-					<div class="avatar">
-						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team3.jpg')}}" alt="team member">
-					</div>	
-					<div class="team-name">Manit Kapoor</div>
-					<div class="position">UI designer</div>
-					<p>
-					  Designed UI and backend	 
-					</p>
-					<div class="social_profiles">
-						<ul class="social-bookmarks">
-							<li class="facebook"><a href="">facebook</a></li>
-							<li class="flickr"><a href="">flickr</a></li>
-							<li class="linkedin"><a href="#">linkedin</a></li>
-							<li class="twitter"><a href="#">twitter</a></li>
-						</ul>
-					</div>	
-				</div>
-				<!-- end: About Member -->
-				
-				<hr class="clean visible-phone">
-
-				<!-- start: About Member -->
-				<div class="span3">
-					<div class="avatar">
-						<img class="img-circle" src="{{ url_for('static', filename='assets/img/team2.jpg')}}" alt="team member">
-					</div>	
-					<div class="team-name">Chandra Soodan</div>
-					<div class="position">Andriod App Developer</div>
-					<p>
-						Developed Andriod App for the Finance agent. 
-					</p>
-					<div class="social_profiles">
-						<ul class="social-bookmarks">
-							<li class="facebook"><a href="">facebook</a></li>
-							<li class="flickr"><a href="">flickr</a></li>
-							<li class="linkedin"><a href="#">linkedin</a></li>
-							<li class="twitter"><a href="#">twitter</a></li>
-						</ul>
-					</div>	
-				</div>
-				<!-- end: About Member -->
-				
-				<hr class="clean visible-phone">	
-			
-			</div>
-			<!-- end: Row -->
-
-		</div>
-		<!-- end: Team -->
-		
-	</div>	
-	
-</div>	
-<!-- end: Row -->
-			</div>
-			<!-- end: Wrapper -->
-		
-		</div>
-		<!--end: Container -->
-		
-	</div>
-	<!-- end: 6th Page - Team -->
-	</div>
 		<footer>
 		<div id="copyright">
 			All investments are subjected to market risks.Please read carefull documents 
 		</div>
 		<div id="social">
-			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
-			<a href="http://facebook.com/BootstrapMaster" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
-			<a href="http://BootstrapMaster.com/feed/" rel="tooltip" title="RSS" class="rss">RSS</a>
+			<a href="#" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
+			<a href="#" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+			<a href="#" rel="tooltip" title="RSS" class="rss">RSS</a>
 			<a href="#" rel="tooltip" title="Github" class="github">Github</a>
 			<a href="#" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
 			<a href="#" rel="tooltip" title="Pintrest" class="pintrest">Pintrest</a>
@@ -421,7 +227,7 @@
 	}
 	
 	</script>
-	<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/ajaxprocess.js') }}" ></script>
+
 	<!-- end: Java Script -->
 	
 </body>

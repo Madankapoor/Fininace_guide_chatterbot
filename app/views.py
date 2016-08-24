@@ -69,6 +69,7 @@ def team():
 	return render_template("team.html")
 
 
+
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     form=ContactForm(request.form)
@@ -79,6 +80,7 @@ def contact():
         flash('Your Message has been saved ,Thank you for contacting us.')
         app.logger.info(post_message.id)
     return render_template("contact.html",form=form)
+
 
 
 @app.route('/chat')
@@ -100,9 +102,65 @@ def chat():
 	    
 	    chatprocess.reset(user.email,Botreply)
 	    TextMessages=chatprocess.GetMessages(user.email)
-	    return render_template('quotes.html',messages=TextMessages)
-	    
-	
+	    return render_template('quotes.html')
+
+
+@app.route('/chathome', methods=["GET"])
+@login_required
+def chathome():
+    user=current_user
+    Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
+    Greeting={'type':'bot','text':Botreply,'time':chatprocess.getTime()}
+    form=ContactForm(request.form)
+    try:
+        TextMessages=chatprocess.GetMessages(user.email)
+        #print(TextMessages)
+        TextMessages.append(Greeting)
+    except:
+        chatprocess.reset(user.email,Botreply)
+        TextMessages=chatprocess.GetMessages(user.email)
+    return render_template("homel.html",messages=TextMessages)
+    
+@app.route('/chatteam', methods=["GET"])
+@login_required
+def chatteam():
+    user=current_user
+    Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
+    Greeting={'type':'bot','text':Botreply,'time':chatprocess.getTime()}
+    form=ContactForm(request.form)
+    try:
+        TextMessages=chatprocess.GetMessages(user.email)
+        #print(TextMessages)
+        TextMessages.append(Greeting)
+    except:
+        chatprocess.reset(user.email,Botreply)
+        TextMessages=chatprocess.GetMessages(user.email)
+    return render_template("teaml.html",messages=TextMessages)
+
+@app.route('/contactform', methods=["GET", "POST"])
+@login_required
+def chatcontact():
+    user=current_user
+    Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
+    Greeting={'type':'bot','text':Botreply,'time':chatprocess.getTime()}
+    form=ContactForm(request.form)
+    try:
+        TextMessages=chatprocess.GetMessages(user.email)
+        #print(TextMessages)
+        TextMessages.append(Greeting)
+    except:
+        chatprocess.reset(user.email,Botreply)
+        TextMessages=chatprocess.GetMessages(user.email)
+	 
+    if  request.method ==  "POST" and form.validate() :
+        post_message=Message(form.name.data,form.email.data,form.message.data)
+        db.session.add(post_message)
+        db.session.commit()
+        flash('Your Message has been saved ,Thank you for contacting us.')
+        app.logger.info(post_message.id)
+    return render_template("contactform.html",form=form,messages=TextMessages)
+
+
 #route for mobile service
 @app.route('/replyalone',methods=['GET','POST'])
 def replyalone():
