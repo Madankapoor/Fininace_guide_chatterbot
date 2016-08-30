@@ -17,4 +17,3 @@ Jinja2>=2.8
 gunicorn>=19.6.0
 aiml
 requests
-json
