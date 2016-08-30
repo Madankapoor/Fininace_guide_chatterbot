@@ -1,6 +1,6 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt,mail
-from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage
+from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,Check
 from forms import RegistrationForm,LoginForm,ContactForm
 from models import User,Message
 import chatprocess
@@ -55,8 +55,9 @@ def logout():
 @app.route('/register',methods=['POST','GET'])
 def register():
     form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
+    if request.method == 'POST' and form.validate() and BotCheck(form.g-recaptcha-response):
     	user = User.query.get(form.email.data)
+    	
     	if user:
     		flash('Entered Email ID is already registered with us.')
     		return render_template('register.html', form=form)
@@ -219,3 +220,7 @@ def reply():
         else:
             resp = make_response("Some error occured Please try chatting again")
         return resp
+
+@app.route('/password_reset',method=['GET'])
+def Passwordrest():
+    if userreply=request.args.get('')
