@@ -20,8 +20,8 @@ def GetPasswordResetMessage(Name,Email,resetUrl):
    msg.body = "Welcome "+Name+" \nPlease use the below link to reset you password.The link will expire in 24 hours.\nThanking You.\n\n"+resetUrl
    return msg
 
-def BotCheck(captcha,ip):
+def BotCheck(captcha):
    site='6Lca5CgTAAAAALU5hkWTwZaPC-pMJydosgG6wZBo'
-   r = requests.post("https://www.google.com/recaptcha/api/siteverify", data={'secret': site, 'response': captcha, 'remoteip': ip})
-   D=json.decode(r.text)
+   r = requests.post("https://www.google.com/recaptcha/api/siteverify", data={'secret': site, 'response': captcha})
+   D = json.loads(r.text)
    return D['success']
