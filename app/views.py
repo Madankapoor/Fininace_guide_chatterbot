@@ -221,6 +221,3 @@ def reply():
             resp = make_response("Some error occured Please try chatting again")
         return resp
 
-@app.route('/password_reset',method=['GET'])
-def Passwordrest():
-    if userreply=request.args.get('')
