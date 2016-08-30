@@ -55,7 +55,8 @@ def logout():
 @app.route('/register',methods=['POST','GET'])
 def register():
     form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate() and BotCheck(form['g-recaptcha-response']):
+    if request.method == 'POST' and form.validate():
+        S=BotCheck(form['g-recaptcha-response'].data)
     	user = User.query.get(form.email.data)
     	
     	if user:
