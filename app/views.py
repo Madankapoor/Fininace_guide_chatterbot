@@ -1,6 +1,7 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
-from app import app,kernel,db,login_manager,bcrypt
-from forms import RegistrationForm , LoginForm ,ContactForm
+from app import app,kernel,db,login_manager,bcrypt,mail
+from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage
+from forms import RegistrationForm,LoginForm,ContactForm
 from models import User,Message
 import chatprocess
 import random
@@ -36,6 +37,10 @@ def login():
         	flash("Please register as the entered Email ID doesn exists.")
     return render_template("login.html",form=form)
 
+
+
+
+
 @app.route("/logout", methods=["GET"])
 @login_required
 def logout():
@@ -58,6 +63,11 @@ def register():
     	user=User(form.username.data,form.email.data,form.password.data,form.age.data)
     	db.session.add(user)
     	db.session.commit()
+    	try:
+    	    mail.send(GetWelcomeMessage(user.name,user.email))
+        except:
+            print("Error while Sending Mail")
+        
         flash('Thanks for registering,you can login Now and start chating')
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
@@ -77,6 +87,7 @@ def contact():
         post_message=Message(form.name.data,form.email.data,form.message.data)
         db.session.add(post_message)
         db.session.commit()
+        mail.send(GetContactMessage(post_message.name,post_message.email,post_message.message))
         flash('Your Message has been saved ,Thank you for contacting us.')
         app.logger.info(post_message.id)
     return render_template("contact.html",form=form)
@@ -156,6 +167,7 @@ def chatcontact():
         post_message=Message(form.name.data,form.email.data,form.message.data)
         db.session.add(post_message)
         db.session.commit()
+        mail.send(GetContactMessage(post_message.name,post_message.email,post_message.message))
         flash('Your Message has been saved ,Thank you for contacting us.')
         app.logger.info(post_message.id)
     return render_template("contactform.html",form=form,messages=TextMessages)

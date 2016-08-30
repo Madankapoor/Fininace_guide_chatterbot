@@ -13,7 +13,8 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 kernel = aiml.Kernel()
 bcrypt=Bcrypt()
-mail = Mail()
+mail = Mail(app)
+
 login_manager=LoginManager()
 login_manager.init_app(app)
 

@@ -3,7 +3,7 @@
 }
 
 .form_container h1{
-  text-align:$align;
+  text-align:center;
   padding:30px 15px 0px 0px;
   font:25px Oswald;
   color:#FFF;
@@ -24,9 +24,9 @@
   width:98%;
   padding:15px 20px 15px 8px;
   border-radius:5px;
+  font:20px Oswald;
   box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
   background:rgba(0,0,0,0.2);
-  @include disable;
   border:1px solid rgba(0,0,0,1);
   margin-bottom:10px;
   color:#6E6E6E;
@@ -38,7 +38,7 @@
   width:100%;
   padding:15px;
   border-radius:5px;
-  @include disable;
+  
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
   background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
   background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
@@ -60,7 +60,6 @@
 .form_container input:focus{
   box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
   background:rgba(0,0,0,0.3);
-  @include easeme;
 }
 
 input[type="submit"]:hover{

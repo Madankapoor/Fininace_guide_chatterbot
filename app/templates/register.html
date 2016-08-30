@@ -19,7 +19,18 @@
 				</div>	
 
 			</div>
-			<!-- end: Page Title -->				
+			<!-- end: Page Title -->
+			<div class="container">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    <ul>
+				    {% for message in messages %}
+				        <li ><h3 class="login_usrn">{{ message }}</h3> </li>
+				    {% endfor %}
+				    </ul>
+				  {% endif %}
+				{% endwith %}
+			</div>
 			{% from "_formhelpers.html" import render_field %}
 		     <div class="form_container">
 			  <form name="register_form" method="post" action="/register">
@@ -32,6 +43,9 @@
 			    {{ render_field(form.password,placeholder="Password") }}
 			    {{ render_field(form.confirm,placeholder="Confirm Password") }}
 			    {{ render_field(form.age,placeholder="Age") }}
+			    <div style="width:100%;position:relative;">
+			    		<div style="margin:0% 0% 0% 35%" class="g-recaptcha" data-sitekey="6Lca5CgTAAAAAF8KMtxwUu5dDYSd-9RdoAkM29eb"></div>
+                </div>
                 <input type="submit" value="Register"> 				
 			  </form>
               </div>			 
