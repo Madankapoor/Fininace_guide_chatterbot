@@ -1,6 +1,6 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt,mail
-from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,Check
+from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,BotCheck
 from forms import RegistrationForm,LoginForm,ContactForm
 from models import User,Message
 import chatprocess
