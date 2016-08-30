@@ -62,6 +62,11 @@ def register():
     	if user:
     		flash('Entered Email ID is already registered with us.')
     		return render_template('register.html', form=form)
+    	
+    	if S==False:
+    		flash('Entered Email ID is already registered with us or Invalid Bot Captcha')
+    		return render_template('register.html', form=form)
+    		
     	user=User(form.username.data,form.email.data,form.password.data,form.age.data)
     	db.session.add(user)
     	db.session.commit()
