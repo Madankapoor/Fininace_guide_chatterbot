@@ -227,3 +227,37 @@ def reply():
             resp = make_response("Some error occured Please try chatting again")
         return resp
 
+
+
+@app.route("/mobilelogin", methods=[ "POST"])
+def mlogin():
+    form = LoginForm()
+    if request.method ==  "POST":
+        user = User.query.get(form.Email.data)
+        if user:
+            if user.password == form.Password1.data:
+                user.authenticated = True
+                db.session.add(user)
+                db.session.commit()
+                login_user(user, remember=True)
+                return "Success"
+            else:
+            	return "Please check your email Id or password as it is incorrect."
+        else:
+        	return "Please register as the entered Email ID doesn exists."
+    return "Failed Please check if all inputs are valid or try after some time."
+
+
+
+
+
+@app.route("/mobilelogout", methods=["GET"])
+@login_required
+def mlogout():
+    """Logout the current user."""
+    user = current_user
+    user.authenticated = False
+    db.session.add(user)
+    db.session.commit()
+    logout_user()
+    return "Success"
