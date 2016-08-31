@@ -16,7 +16,7 @@ def GetContactMessage(Name,Email,M):
 
 
 def GetPasswordResetMessage(Name,Email,resetUrl):
-   msg = Message('Request for Password Reset Finchatbot Services', sender = 'finchatbot@gmail.com', recipients = [email])
+   msg = Message('Request for Password Reset Finchatbot Services', sender = 'finchatbot@gmail.com', recipients = [Email])
    msg.body = "Welcome "+Name+" \nPlease use the below link to reset you password.The link will expire in 24 hours.\nThanking You.\n\n"+resetUrl
    return msg
 
