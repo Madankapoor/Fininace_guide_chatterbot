@@ -231,7 +231,7 @@ def reply():
 
 @app.route("/mobilelogin", methods=[ "POST"])
 def mlogin():
-    form = LoginForm()
+    form = request.form
     if request.method ==  "POST":
         user = User.query.get(form.Email.data)
         if user:
