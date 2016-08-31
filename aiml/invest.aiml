@@ -10,6 +10,168 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 <category><pattern>WHY TO INVEST</pattern>
-<template>To create your wealth for your well being.Look<a href="https://www.valueresearchonline.com/story/h2_storyview.asp?str=28901">HERE</a></template>
+<template>To create your wealth for your well being.Look at https://www.valueresearchonline.com/story/h2_storyview.asp?str=28901</template>
+</category>
+<category><pattern>INVESTMENT</pattern>
+<template>Well to allocate money in a way to get benefit from it in future</template>
+</category>
+<category><pattern>WHY SHOULD I INVEST</pattern>
+<template><srai>WHY TO INVEST</srai></template>
+</category>
+<category><pattern>SO WHY SHOULD I INVEST</pattern>
+<template><srai>WHY TO INVEST</srai></template>
+</category>
+<category><pattern>* WHY SHOULD I INVEST</pattern>
+<template><srai>WHY TO INVEST</srai></template>
+</category>
+<category><pattern>WHY SHOULD I INVEST IN *</pattern>
+<template>Search about it on internet, Observe its history of investment you will get idea about it</template>
+</category>
+<category><pattern>SHOULD I INVEST</pattern>
+<template>YES!! So that you have better living</template>
+</category>
+<category><pattern>WHERE TO GET MONEY TO INVEST</pattern>
+<template>Try to save more from your income and then invest that money to get more wealth</template>
+</category>
+<category><pattern>HOW CAN I GET MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>HOW TO GET MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>HOW TO EARN MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>HOW SHOULD I EARN MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>HOW SHOULD I GET MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>MONEY TO INVEST</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY TO INVEST</srai></template>
+</category>
+<category><pattern>WHERE TO GET MONEY FOR INVESTMENT</pattern>
+<template>Try to save more from your income and then invest that money to get more wealth</template>
+</category>
+<category><pattern>HOW CAN I GET MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>HOW TO GET MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>HOW TO EARN MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>HOW SHOULD I EARN MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>HOW SHOULD I GET MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>MONEY FOR INVESTMENT</pattern>
+<template><srai>WHERE TO GET MONEY FOR INVESTMENT</srai></template>
+</category>
+<category><pattern>WHERE TO GET MONEY</pattern>
+<template>you can earn money by going for job or bussiness</template>
+</category>
+<category><pattern>HOW TO GET MONEY</pattern>
+<template>you can earn money by going for job or bussiness</template>
+</category>
+<category><pattern>HOW TO EARN MONEY</pattern>
+<template>you can earn money by going for job or bussiness</template>
+</category>
+<category><pattern>WHERE TO EARN MONEY</pattern>
+<template>you can earn money by going for job or bussiness</template>
+</category>
+<category><pattern>HOW TO BECOME RICH</pattern>
+<template>Proper periodic investment will get you huge wealth in a period of time</template>
+</category>
+<category><pattern>HOW CAN I BECOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>HOW CAN I BECOME VERY RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>HOW CAN I BECOME AWESOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT TO BECOME AWESOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT TO BECOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT TO BECOME VERY RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I HAVE A DREAM TO BECOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>MAKE ME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>HOW TO GET RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>HOW TO GET VERY RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>CAN YOU MAKE ME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I ORDER YOU TO MAKE ME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I NEED TO BECOME RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MYSELF AS RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MYSELF AS VERY RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MYSELF AS VERY VERY RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MYSELF AS SUPER RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MYSELF AS SUPER RICH</pattern>
+<template><srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>I WANT MY FAMILY TO BE RICH</pattern>
+<template>You have to become rich first.<srai>HOW TO BECOME RICH</srai></template>
+</category>
+<category><pattern>HOW TO INVEST</pattern>
+<template>look here https://www.valueresearchonline.com/story/h2_storyview.asp?str=28902 nice answer</template>
+</category>
+<category><pattern>HOW CAN I INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>HOW SHOULD I INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>HOW MUST I INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>WHAT ARE THE WAYS TO INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>WHAT ARE THE DIFFERENT WAYS TO INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>WHAT ARE THE VARIOUS WAYS TO INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>WHAT IS THE WAY TO INVEST</pattern>
+<template><srai>HOW TO INVEST</srai></template>
+</category>
+<category><pattern>WHERE SHOULD I INVEST</pattern>
+<template>Look here for nice answer https://www.valueresearchonline.com/story/h2_storyview.asp?str=28903</template>
 </category>
 </aiml>

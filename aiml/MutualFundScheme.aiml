@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 10/5/2011 -->
+<!-- -->
+<category><pattern>VARIOUS SCHEMES OF MUTUALFUNDS</pattern>
+<template>There are various schemes in Mutual Funds.Based on investment area,time period etc..Schemes are based on Customer and mutual fund agency</template>
+</category>
+<category><pattern>SUGGEST ME MUTUALFUND SCHEME</pattern>
+<template><random><li>Go for equity funds to earn nice wealth but it has more risk</li><li>Go for debt funds to be safe</li><li>Try a combination of schemes like equity with debt</li></random></template>
+</category>
+<category><pattern>WHICH MUTUALFUND SCHEME SHOULD I GO FOR</pattern>
+<template><srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH MUTUALFUND SCHEME SHOULD I TAKE</pattern>
+<template><srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH IS THE BEST MUTUALFUND SCHEME</pattern>
+<template>That depends on the customer, for you <srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME SHOULD I GO FOR</pattern>
+<template><srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME SHOULD I TAKE</pattern>
+<template><srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH IS THE BEST SCHEME</pattern>
+<template>That depends on the customer, for you <srai>SUGGEST ME MUTUALFUND SCHEME</srai></template>
+</category>
+<category><pattern>VARIOUS SCHEMES OF MUTUAL FUNDS</pattern>
+<template>There are various schemes in Mutual Funds.Based on investment area,time period etc..Schemes are based on Customer and mutual fund agency</template>
+</category>
+<category><pattern>SUGGEST ME MUTUAL FUND SCHEME</pattern>
+<template><random><li>Go for equity funds to earn nice wealth but has more risk</li><li>Go for debt funds to be safe</li><li>Try a combination of schemes like equity with debt</li></random></template>
+</category>
+<category><pattern>WHICH MUTUAL FUND SCHEME SHOULD I GO FOR</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH MUTUAL FUND SCHEME SHOULD I TAKE</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH IS THE BEST MUTUAL FUND SCHEME</pattern>
+<template>That depends on the customer, for you <srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME SHOULD I GO FOR</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME SHOULD I TAKE</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH IS THE BEST SCHEME</pattern>
+<template>That depends on the customer <srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME WOULD BE GOOD FOR ME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME WOULD BE BEST FOR ME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME WOULD BE NICE FOR ME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>SUGGEST ME SCHEME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>THE BEST SCHEME FOR ME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>THE BEST SCHEME</pattern>
+<template><srai>SUGGEST ME MUTUAL FUND SCHEME</srai></template>
+</category>
+<category><pattern>A NICE SCHEME FOR ME</pattern>
+<template>I guess debt funds would be good for you</template>
+</category>
+<category><pattern>A GOOD SCHEME</pattern>
+<template>All schemes are good, choose the best one on your basis</template>
+</category>
+<category><pattern>TELL ME A GOOD SCHEME</pattern>
+<template><srai>A GOOD SCHEME</srai></template>
+</category>
+<category><pattern>WHICH SCHEME IS GOOD</pattern>
+<template><srai>A GOOD SCHEME</srai></template>
+</category>
+</aiml>
