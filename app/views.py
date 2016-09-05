@@ -1,7 +1,7 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt,mail
 from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,BotCheck
-from forms import RegistrationForm,LoginForm,ContactForm
+from forms import RegistrationForm,LoginForm,ContactForm,ResetRequestForm,Reset
 from models import User,Message
 import chatprocess
 import random
@@ -11,13 +11,10 @@ from flask_login import  login_required, login_user, logout_user, current_user
 def user_loader(user_id):
 	return User.query.get(user_id)
 
- 
 @app.route('/')
 @app.route('/Home')
 def index():
     return render_template("Home.html")
-
-
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -36,10 +33,6 @@ def login():
         else:
         	flash("Please register as the entered Email ID doesn exists.")
     return render_template("login.html",form=form)
-
-
-
-
 
 @app.route("/logout", methods=["GET"])
 @login_required
@@ -78,7 +71,6 @@ def register():
         flash('Thanks for registering,you can login Now and start chating')
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
-	
 
 
 @app.route('/team')
@@ -100,6 +92,42 @@ def contact():
     return render_template("contact.html",form=form)
 
 
+@app.route('/resetrequest',methods=['GET','POST'])
+def resetrequest():
+    form=ResetRequestForm(request.form)
+    if request.method == "POST" and form.validate():
+        ResetRequest=Reset(form.email.data)
+        db.session.add(ResetRequest)
+    	db.session.commit()
+        flash('Check you mail to reset you password and login in here to continue.')
+        return redirect(url_for('login'))
+    return render_template("resetrequest.html",form=form)
+
+@app.route('/reset',methods=['GET','POST'])
+def reset():
+    form=Reset(request.form)
+    if request.args.get('id'):
+        M=Reset.query.get(request.args.get('id'))
+        if M.Key ==  Reset.query.get('Key') and M.get_validity():
+            User=User.query.get(Reset.query.get('email'))
+            if form.password1.data == form.confirm.data:
+                User.password=form.password1.data
+                db.session.add(user)
+    	        db.session.commit()
+    	        flash('Please Login with your new password.')
+                return redirect(url_for('login'))
+            else:
+                flash('The passwords do not match.')
+                return redirect(url_for('reset'))
+        else:
+            flash('Invalid Link or Link expired')
+            return redirect(url_for('home'))
+    else:
+        flash('Invalid Link')
+        return redirect(url_for('home'))
+    
+    return render_template('reset.html',form=form)
+
 
 @app.route('/chat')
 @login_required
@@ -107,11 +135,9 @@ def chat():
 	user=current_user
 	Botreply="Hi "+current_user.name+", How can I help in your queries related to Investments ?"
 	
-	
 	Greeting={'type':'bot','text':Botreply,'time':chatprocess.getTime()}
 	
 	try:
-	    
 	    TextMessages=chatprocess.GetMessages(user.email)
 	    #print(TextMessages)
 	    TextMessages.append(Greeting)
@@ -261,3 +287,4 @@ def mlogout():
     db.session.commit()
     logout_user()
     return "Success"
+

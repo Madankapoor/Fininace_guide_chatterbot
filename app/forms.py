@@ -25,4 +25,14 @@ class ContactForm(Form):
      name = StringField(u'Username', [validators.Length(min=4, max=30)])
      email= StringField(u'Email Address', [validators.Length(min=6, max=35),validators.DataRequired()])
      message = TextAreaField(u'Message ', [validators.optional(), validators.length(max=200)])
-     
+    
+
+class ResetRequestForm(Form):
+     email= StringField(u'Email Address', [validators.Length(min=6, max=35),validators.DataRequired()])
+
+
+class Reset(Form):
+    password = PasswordField(u'New Password', [validators.DataRequired(),
+        validators.EqualTo(u'confirm', message='Passwords must match')])
+    confirm = PasswordField('Repeat Password')
+    

@@ -1,5 +1,7 @@
 from app import db
 from datetime import datetime
+import random
+
 
 class User(db.Model):
     __tablename__ = "users"
@@ -57,6 +59,31 @@ class Message(db.Model):
     def get_id(self):
         return self.id  # python 2
 
+class Reset(db.Model):
+    __tablename__ = "reset"
+    id= db.Column(db.Integer,primary_key=True,autoincrement=True)
+    email = db.Column(db.String(50),db.ForeignKey("users.email"), nullable=False)
+    time = db.Column('Sent_on' , db.DateTime)
+    Key =db.Column(db.Integer,unique=True)
     
+    def __init__(self ,email):
+        self.email = email
+        self.time =datetime.utcnow()
+        self.Key = random.randrange(0,7897984561)
     
-   
+    def get_id(self):
+        return self.id  # python 2
+    
+    def get_key(self):
+        return Key
+    
+    def get_validity(self):
+        Time = datetime.utcnow()
+        if (Time.Subtract(self.Time).TotalMinutes <= 60):
+            return True
+        else:
+            return False
+    
+
+
+

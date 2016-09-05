@@ -7,7 +7,7 @@
 
 				<div id="page-title-inner">
 
-					<h2><span>Login</span></h2>
+					<h2><span>Reset Password</span></h2>
 
 				</div>	
 
@@ -25,19 +25,14 @@
 				{% endwith %}
 			</div>
             <div class="container" id="LoginForm">   
-				    <form name="login__form" method="post" action="/login">
+				    <form name="login__form" method="post" action="/resetrequest">
 				    {% from "_formhelpers.html" import render_field %}
 	                {{ form.hidden_tag() }}
 	                <h1 class="login_usrn">Username:</h1><br />
 	                {{ render_field(form.Email,class = "login_input12",placeholder="Enter your email") }}
-          			<br />
-					<h1 class="login_usrn" >Password:</h1><br />
-					{{ render_field(form.Password1,placeholder="Enter your password") }}
 					<br/>
-					<br>
-					<input type="submit" class="login_button" value="Let me in!!">					
-					</form>
-					<h1 class="login_usrn" ><a href="/resetrequest"> Forgot Password Click Here</a></h1>
+					<input type="submit" class="login_button" value="Submit Request">					
+					</form>  
 			</div>        
 		</div>
 		
