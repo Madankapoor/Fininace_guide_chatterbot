@@ -10,10 +10,10 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 <category><pattern>WHY TO INVEST</pattern>
-<template>To create your wealth for your well being.Look at https://www.valueresearchonline.com/story/h2_storyview.asp?str=28901</template>
+<template>To create your wealth for your well being.Look at <![CDATA[ <a href="https://www.valueresearchonline.com/story/h2_storyview.asp?str=28901"> HERE </a> ]]></template>
 </category>
 <category><pattern>INVESTMENT</pattern>
-<template>Well to allocate money in a way to get benefit from it in future</template>
+<template>In simple words,Well to allocate money in a way to get benefit from it in future is investment</template>
 </category>
 <category><pattern>WHAT IS INVESTMENT</pattern>
 <template><srai>INVESTMENT</srai></template>
@@ -193,18 +193,44 @@
 <template><srai>HOW TO INVEST</srai></template>
 </category>
 <category><pattern>WHERE SHOULD I INVEST</pattern>
-<template>Look here for nice answer https://www.valueresearchonline.com/story/h2_storyview.asp?str=28903</template>
+<template>Look here for nice answer <![CDATA[https://www.valueresearchonline.com/story/h2_storyview.asp?str=28903]]></template>
 </category>
 <category><pattern>WHO IS THE RICHEST MAN</pattern>
 <template>
     <random>
         <li>refer forbes website for that I think it was bill gates according to 2016 stats</li>
-        <li>It can be you too work smart,its Bill Gates</li>
+        <li>It can be you too work smart, its Bill Gates</li>
         <li>It must be Bill Gates</li>
         <li>Microsoft owner Bill Gates I guess, did it change?</li>
     </random>
-</template>
+</template></category>
 <category><pattern>RICHEST MAN</pattern>
-<template><srai>WHO IS THE RICHEST MAN</srai></pattern>
+<template><srai>WHO IS THE RICHEST MAN</srai></template>
+</category>
+<category><pattern>RICHEST MAN IN INDIA</pattern>
+<template><srai>WHO IS THE RICHEST MAN IN INDIA</srai></template>
+</category>
+<category><pattern>WHO IS THE RICHEST MAN IN *</pattern>
+<template>
+    <think><set name="resgion"><star /></set></think>
+    <condition name = "resgion" value="INDIA">
+        Mukesh Ambani is the richest man in india
+    </condition>
+    <condition name = "resgion" value="india">
+        Mukesh Ambani is the richest man in india
+    </condition>
+    <condition name = "resgion" value="AMERICA">
+        Bill Gates is the richest man in World
+    </condition>
+     <condition name = "resgion" value="america">
+        Bill Gates is the richest man in World
+    </condition>
+    <condition name = "resgion" value="ASIA">
+        Wang Jianlin is the richest man in Asia, google about him.
+    </condition>
+    <condition name = "resgion" value="asia">
+        Wang Jianlin is the richest man in Asia, google about him.
+    </condition>
+</template>
 </category>
 </aiml>

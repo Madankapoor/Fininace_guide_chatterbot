@@ -56,5 +56,7 @@ class Message(db.Model):
 
     def get_id(self):
         return self.id  # python 2
+
+    
     
    

@@ -87,4 +87,7 @@
 <category><pattern>WHICH SCHEME IS GOOD</pattern>
 <template><srai>A GOOD SCHEME</srai></template>
 </category>
+<category><pattern>WHICH IS THE BEST MUTUAL FUND EQUITY SCHEME</pattern>
+<template><srai>WHICH IS THE BEST EQUITY SCHEME</srai></template>
+</category>
 </aiml>
