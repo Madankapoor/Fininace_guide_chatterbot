@@ -28,9 +28,10 @@
 				    <form name="login__form" method="post" action="/resetrequest">
 				    {% from "_formhelpers.html" import render_field %}
 	                {{ form.hidden_tag() }}
-	                <h1 class="login_usrn">Username:</h1><br />
-	                {{ render_field(form.Email,class = "login_input12",placeholder="Enter your email") }}
+	                <h1 class="login_usrn">Email:</h1><br />
+	                {{ render_field(form.email,class = "login_input12",placeholder="Enter your email") }}
 					<br/>
+					<br>
 					<input type="submit" class="login_button" value="Submit Request">					
 					</form>  
 			</div>        
