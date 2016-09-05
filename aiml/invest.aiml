@@ -169,7 +169,7 @@
 <template>You have to become rich first.<srai>HOW TO BECOME RICH</srai></template>
 </category>
 <category><pattern>HOW TO INVEST</pattern>
-<template>look here https://www.valueresearchonline.com/story/h2_storyview.asp?str=28902 nice answer</template>
+<template>look <![CDATA[ <a href="https://www.valueresearchonline.com/story/h2_storyview.asp?str=28902">HERE</a>]]> for a nice answer</template>
 </category>
 <category><pattern>HOW CAN I INVEST</pattern>
 <template><srai>HOW TO INVEST</srai></template>
