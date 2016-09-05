@@ -233,4 +233,19 @@
     </condition>
 </template>
 </category>
+<category><pattern>SHOULD I GO FOR SOVEREIGN GOLD BONDS?</pattern>
+<template>You may consider investing in sovereign gold bonds, as these bonds score over gold ETFs on two counts</template>
+</category>
+<category><pattern>IS SOVEREIGN GOLD BONDS GOOD?</pattern>
+<template><srai>SHOULD I GO FOR SOVEREIGN GOLD BONDS?</srai></template>
+</category>
+<category><pattern>IS SOVEREIGN GOLD BONDS GOOD FOR ME?</pattern>
+<template><srai>SHOULD I GO FOR SOVEREIGN GOLD BONDS?</srai></template>
+</category>
+<category><pattern></pattern>
+<template></template>
+</category>
+<category><pattern></pattern>
+<template></template>
+</category>
 </aiml>

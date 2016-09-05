@@ -1,8 +1,8 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt,mail
 from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,BotCheck
-from forms import RegistrationForm,LoginForm,ContactForm,ResetRequestForm,Reset
-from models import User,Message
+from forms import RegistrationForm,LoginForm,ContactForm,ResetRequestForm,ResetForm
+from models import User,Message,Reset
 import chatprocess
 import random
 from flask_login import  login_required, login_user, logout_user, current_user
@@ -101,36 +101,54 @@ def resetrequest():
         ResetRequest=Reset(form.email.data)
         db.session.add(ResetRequest)
     	db.session.commit()
-    	resetUrl='https://investmentchatter-madankapoor.c9users.io/resetrequest?key='+ResetRequest.id+'&id='+ResetRequest.Key;
-    	mail.send(GetPasswordResetMessage(user.name,Email,resetUrl))
+    	resetUrl='https://investmentchatter-madankapoor.c9users.io/reset?key='+str(ResetRequest.Key)+'&id='+str(ResetRequest.id)
+    	mail.send(GetPasswordResetMessage(user.name,user.email,resetUrl))
         flash('Check you mail to reset you password and login in here to continue.')
         return redirect(url_for('login'))
     return render_template("resetrequest.html",form=form)
 
+def CheckRequest(Id,KEY):
+    row=Reset.query.get(Id)
+    if row is None:
+        return 0
+    
+    if row.Key == KEY and row.get_validity():
+        return 1
+    else:
+        return 0
+    
+def get_email(Id):
+    return Reset.query.get(Id).email
+
 @app.route('/reset',methods=['GET','POST'])
 def reset():
-    form=Reset(request.form)
-    if request.args.get('id'):
-        M=Reset.query.get(request.args.get('id'))
-        if M.Key ==  Reset.query.get('Key') and M.get_validity():
-            User=User.query.get(Reset.query.get('email'))
-            if form.password1.data == form.confirm.data:
-                User.password=form.password1.data
-                db.session.add(user)
-    	        db.session.commit()
-    	        flash('Please Login with your new password.')
-                return redirect(url_for('login'))
-            else:
-                flash('The passwords do not match.')
-                return redirect(url_for('reset'))
-        else:
-            flash('Invalid Link or Link expired')
-            return redirect(url_for('home'))
-    else:
-        flash('Invalid Link')
-        return redirect(url_for('home'))
+    form=ResetForm(request.form)
+    if request.method == 'GET':
+        id=int(request.args.get('id'))
+        key=int(request.args.get('key'))
+        if CheckRequest(id,key)==0:
+            flash('The Request is invalid or expired.Please try again.')
+            return redirect(url_for('login')) 
+        resp = make_response(render_template('reset.html',form=form))
+        resp.set_cookie('email',get_email(id))
+        return resp
     
-    return render_template('reset.html',form=form)
+    if request.method == 'POST' and form.validate():
+        S=BotCheck(request.form.get('g-recaptcha-response'))
+        user=User.query.get(request.cookies.get('email'))
+    	
+    	if user is None:
+    		flash("Entered Email ID is not registered with us.")
+    		return render_template('register.html', form=form)
+    	
+    	if S==False:
+    		flash('Invalid Bot Captcha,Please reuse the link.')
+    		return redirect(url_for('login')) 
+        user.password= form.confirm.data
+        db.session.add(user)
+        db.session.commit()
+        flash('Password changed ,now you can login with you new password')
+        return redirect(url_for('login')) 
 
 
 @app.route('/chat')

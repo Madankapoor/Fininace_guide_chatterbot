@@ -31,8 +31,8 @@ class ResetRequestForm(Form):
      email= StringField(u'Email Address', [validators.Length(min=6, max=35),validators.DataRequired()])
 
 
-class Reset(Form):
+class ResetForm(Form):
     password = PasswordField(u'New Password', [validators.DataRequired(),
         validators.EqualTo(u'confirm', message='Passwords must match')])
-    confirm = PasswordField('Repeat Password')
+    confirm = PasswordField(u'Repeat Password')
     

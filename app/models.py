@@ -74,15 +74,28 @@ class Reset(db.Model):
     def get_id(self):
         return self.id  # python 2
     
+    def get_email(Id):
+        return query.get(Id).email
+    
     def get_key(self):
-        return Key
+        return self.Key
     
     def get_validity(self):
         Time = datetime.utcnow()
-        if (Time.Subtract(self.Time).TotalMinutes <= 60):
+        if ((Time-(self.time)).total_seconds() <=3600):
             return True
         else:
             return False
+    
+    def CheckRequest(Id,KEY):
+        row=query.get(Id)
+        if row is None:
+            return 0
+        
+        if row.Key == KEY and row.get_validity():
+            return 1
+        else:
+            return 0
     
 
 

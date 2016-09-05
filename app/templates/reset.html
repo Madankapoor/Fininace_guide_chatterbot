@@ -1,0 +1,56 @@
+	{% extends "index2.html" %}
+	{% block content %}
+<!-- start: 5th Page - About -->
+	<div id="about" class="color black">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+						<h2><span>Set your Password</span></h2>
+
+				</div>	
+
+			</div>
+			<!-- end: Page Title -->
+			<div class="container">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    <ul>
+				    {% for message in messages %}
+				        <li ><h3 class="login_usrn">{{ message }}</h3> </li>
+				    {% endfor %}
+				    </ul>
+				  {% endif %}
+				{% endwith %}
+			</div>
+			{% from "_formhelpers.html" import render_field %}
+		     <div class="form_container">
+			  <form name="register_form" method="post" action="/reset">
+			  	{{ form.hidden_tag() }}
+			  <h1>Reset you password</h1>
+				<p>Please enter a new password twice. </p>
+			    {{ render_field(form.password,placeholder="Password") }}
+			    {{ render_field(form.confirm,placeholder="Confirm Password") }}
+			    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lca5CgTAAAAAF8KMtxwUu5dDYSd-9RdoAkM29eb"  style="margin:0% 0% 0% 35%" ></div>
+                	
+                <input type="submit" value="Change"> 				
+			  </form>
+              </div>			 
+			
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 5th Page - About -->
+	{% endblock %}
