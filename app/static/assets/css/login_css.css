@@ -1,9 +1,9 @@
-.login_usrn {
+ .login_usrn {
   	position: relative;
 	margin-left: 30%; 
 }
 
-.pass_forgot {
+ #pass_forgot {
   	position: relative;
 	margin-left: 30%;
 }
