@@ -6,6 +6,7 @@
  .pass_forgot {
   	position: relative;
 	margin-left: 30%;
+	display: inline-block;
 }
  
  .login_input12 {
