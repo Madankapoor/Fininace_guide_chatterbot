@@ -204,5 +204,7 @@
         <li>Microsoft owner Bill Gates I guess, did it change?</li>
     </random>
 </template>
+<category><pattern>RICHEST MAN</pattern>
+<template><srai>WHO IS THE RICHEST MAN</srai></pattern>
 </category>
 </aiml>
