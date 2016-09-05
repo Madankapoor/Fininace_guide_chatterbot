@@ -15,6 +15,27 @@
 <category><pattern>INVESTMENT</pattern>
 <template>Well to allocate money in a way to get benefit from it in future</template>
 </category>
+<category><pattern>WHAT IS INVESTMENT</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>DEFINE INVESTMENT</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>WHAT ARE INVESTMENTS</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>TELL ME ABOUT INVESTMENT</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>TELL ME ABOUT INVESTMENTS</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>TELL ME SOMETHING ABOUT INVESTMENT</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
+<category><pattern>TELL ME SOMETHING ABOUT INVESTMENTS</pattern>
+<template><srai>INVESTMENT</srai></template>
+</category>
 <category><pattern>WHY SHOULD I INVEST</pattern>
 <template><srai>WHY TO INVEST</srai></template>
 </category>
@@ -173,5 +194,14 @@
 </category>
 <category><pattern>WHERE SHOULD I INVEST</pattern>
 <template>Look here for nice answer https://www.valueresearchonline.com/story/h2_storyview.asp?str=28903</template>
+</category>
+<category><pattern>WHO IS THE RICHEST MAN</pattern>
+<template>
+    <random>
+        <li>refer forbes website for that I think it was bill gates according to 2016 stats</li>
+        <li>It can be you too work smart</li>
+        <li>It must be Bill Gates</li>
+    </random>
+</template>
 </category>
 </aiml>
