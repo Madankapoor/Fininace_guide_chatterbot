@@ -530,7 +530,6 @@ callee: <srai>my callee</srai><br/>
 
 <category><pattern>I AM *</pattern>
 <template><random>   
-<li>Why are you</li>  
 <li>Good gossip: you are</li>  
 <li>Do you mean your name is</li>  
 <li>Do your friends call you</li>  

@@ -25,5 +25,8 @@ if os.path.isfile("bot_brain.brn"):
 else:
     kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml b")
     kernel.saveBrain("bot_brain.brn")
+#Bot Setting
+kernel.setBotPredicate("name", "Fin")
+kernel.setBotPredicate('gender', 'female')
 
 from app import views,models
