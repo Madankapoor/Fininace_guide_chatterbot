@@ -253,7 +253,6 @@ position:relative;
 }
 
 .chat-clear-button {
-	position:relative;
 	-moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
 	-webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
 	box-shadow:inset 0px 0px 14px -3px #f2fadc;
@@ -270,7 +269,6 @@ position:relative;
 	border-radius:8px;
 	border:1px solid #b2b8ad;
 	display:inline-block;
-	cursor:pointer;
 	color:#757d6f;
 	font-family:Arial;
 	font-size:18px;

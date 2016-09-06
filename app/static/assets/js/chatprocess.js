@@ -1,5 +1,5 @@
 var date = new Date();
-
+document.getElementById('clear-button').onclick=chatclear
 function getTime()
 {
 	var hours = date.getHours();
