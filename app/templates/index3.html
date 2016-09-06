@@ -58,12 +58,9 @@
 
 
 		<footer>
-		
 		<div id="copyright">
 			For more imformation and details please contact us from the contact section.  
 		</div>
-		
-		
 		<div id="social">
 			<a href="#" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
 			<a href="#" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
@@ -76,8 +73,7 @@
 		</div>	
 		
 	</footer>
-	
-	
+	<!-- start: dialogs -->
 	  <div id="chat-dialog" title="Basic dialog">
 		<form method="post" action="javascript:GetReply()" >
 		<div id= "chat-textarea" >
@@ -89,11 +85,10 @@
     	</div><br>
 		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
 		<div class="chat-submit-container">
+		<button class="chat-clear-button" type="button"  value="clear" onclick="chatclear()"/>Clear</button>
 		<input class="chat-submit-button" type="submit" value="Send" />
-	 	<button class="chat-clear-button"  value="clear" id="clear-button" type="button" onclick="javascript:chatclear()">Clear</button>
-	 	</div>
-	 	</form>
-	 	</div>
+	 </div>
+	
 	 <!-- start: Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
@@ -121,6 +116,8 @@
 	<script src="{{ url_for('static', filename='assets/js/jquery.dialogextend.min.js') }}" ></script>
 	<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/chatprocess.js') }}" ></script>
 	<script type="text/javascript">	
+		var uisetting="border: 2px solid #f2e3d2;background: #eeeeee;background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); 	background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); 	background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 100%); 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );   -webkit-border-radius: 26px;   -moz-border-radius: 26px;   border-radius: 26px;   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   font-family: 'Helvetica Neue',Helvetica,sans-serif;   text-decoration: none;   vertical-align: middle;   min-width:300px;   padding:40px;   width:1000px;"
+		var prevsetting;
 		$(function() {
 			
 			var Page = (function() {
@@ -185,6 +182,33 @@
 			})();
 	
 			Page.init();
+		/*	$( '#menu-dialog' ).dialog({					
+						minWidth:  100,
+						draggable: false,
+						resizable: false,
+						title: "Menu"
+					});
+			  <div id="Menu-dialog">
+	  <div>
+		<h3>General Information</h3>
+		<button>Learn About</button><br>
+		<button>Know About</button><br>
+		<button>Stats</button>
+	  </div>
+	  <div>
+		<h3>Mutual Funds</h3>
+		<button>Learn About</button><br>
+		<button>Know About</button><br>
+		<button>Stats</button>
+	  </div>
+	  <div>
+		<h3>Chat</h3>
+		<button>Resume Chat</button><br>
+		<button>Close Chat</button><br>
+	  </div>
+	  </div>
+			*/
+			
 				$( '#chat-dialog' ).dialog({					
 						minWidth:  800,
 						draggable: true,
@@ -198,18 +222,32 @@
 							"collapsable" : false,
 							"dblclick" : "collapse",
 							"titlebar" : "transparent",
-							"minimizeLocation" : "left",
+							"minimizeLocation" : "right",
 							"icons" : {
 							  "close" : "ui-icon-close",
 							  "maximize" : "ui-icon-clipboard",
 							  "minimize" : "ui-icon-minus",
 							  "collapse" : "ui-icon-triangle-1-s",
 							  "restore" : " ui-icon-refresh"
-							}
+							},
+							 "load" : function(evt, dlg){ 
+							 prevsetting=$('.ui-dialog').css('cssText');
+							 $('.ui-dialog').css('cssText',uisetting);
+								},
+							 "beforeMinimize" : function(evt, dlg){ $('.ui-dialog').css('cssText',prevsetting); },
+							 "beforeMaximize":	function(evt, dlg){ $('.ui-dialog').css('cssText',uisetting);  },
+				
+							 "beforeCollapse" : function(evt, dlg){ $('.ui-dialog').css('cssText',prevsetting); },
+							"beforeRestore" : function(evt, dlg){ $('.ui-dialog').css('cssText',uisetting);  },
+							
+							
+								
 						}
 					);
 					
 			$('#chat-textarea').animate({scrollTop: $('#chat-textarea').get(0).scrollHeight}, 500);	
+		
+				
 		});
 		
 			var Plook=true;	
@@ -234,7 +272,11 @@
 	}
 	
 	</script>
-
+	<script type="text/javascript">
+	
+	
+	
+	</script>
 	<!-- end: Java Script -->
 	
 </body>

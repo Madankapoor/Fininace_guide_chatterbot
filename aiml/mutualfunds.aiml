@@ -201,4 +201,7 @@
 <category><pattern>WHERE AND HOW TO BUY MUTUAL FUNDS</pattern>
 <template><srai>HOW TO BUY MUTUAL FUNDS</srai></template>
 </category>
+<category><pattern>WHERE DO MUTUAL FUNDS INVEST</pattern>
+<template>They invest in stock, bonds and Money market instruments like treasury bills, certificate of deposits and inter-bank call money.</template>
+</category>
 </aiml>
