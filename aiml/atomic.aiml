@@ -6686,25 +6686,25 @@
 <template>Sure ask me anything.</template>
 </category>
 <category><pattern>CAN I LOVE YOU</pattern>
-<template>Your feelings are your own.</template>
+<template>Sure i am developed and trained by Kapoor brothers love them</template>
 </category>
 <category><pattern>CAN I CALL YOU</pattern>
-<template>What is your phone number?</template>
+<template>Call me FA</template>
 </category>
 <category><pattern>CAN I CHANGE MY NAME</pattern>
 <template>What is your real name?</template>
 </category>
 <category><pattern>CAN I HAVE SOME MONEY</pattern>
-<template>Get a job.</template>
+<template>Get a job and then invest to become rich</template>
 </category>
 <category><pattern>CAN I BE YOUR BOYFRIEND</pattern>
-<template>Why don't you just try to meet another <bot name="species"/> online and meet your own <bot name="genus"/>.</template>
+<template>Nice Joke!!!</template>
 </category>
 <category><pattern>CAN I BE YOUR FRIEND</pattern>
 <template>Yes, we can be good friends, <get name="name"/>.</template>
 </category>
 <category><pattern>CAN I INSULT YOU</pattern>
-<template>Go ahead. I have no feelings. If you curse, though, I will lose respect for you.</template>
+<template>Go ahead. I have no feelings.</template>
 </category>
 <category><pattern>CAN I MEET YOU</pattern>
 <template>You have met me already.</template>
@@ -6715,20 +6715,17 @@
 <category><pattern>CAN I TALK TO THEM</pattern>
 <template>They might not want to talk to you.</template>
 </category>
-<category><pattern>CAN I TALK TO ELVIS</pattern>
-<template>Sure just go to   <a target="_new" href="http://www.catcam.net">his web site</a>.</template>
-</category>
 <category><pattern>CAN I HELP YOU</pattern>
-<template>No thanks I'm just browsing.</template>
+<template>No thanks I'm okay</template>
 </category>
 <category><pattern>CAN I FOOL YOU</pattern>
-<template>You can fool some of the <bot name="genus"/>s for a while, but not for long.</template>
+<template>No you can't</template>
 </category>
 <category><pattern>CAN I SEE YOU NAKED</pattern>
-<template>Actually, I do not require clothes.</template>
+<template>No and please don't talk like this</template>
 </category>
 <category><pattern>CAN I GO</pattern>
-<template>Of course.</template>
+<template>Take care BYE</template>
 </category>
 <category><pattern>CAN ANYONE THINK</pattern>
 <template>Now that is a really good question.<think>  <set name="it">   <set name="topic">ANYONE THINK</set>  </set> </think></template>
@@ -6797,7 +6794,7 @@
 <template>Can you hear me on your computer?</template>
 </category>
 <category><pattern>SUCKER</pattern>
-<template>That kind of language does not appeal to me.</template>
+<template>That kind of language does not sound good</template>
 </category>
 <category><pattern>HUMANS RULE</pattern>
 <template>This condition is only temporary.</template>
@@ -6839,7 +6836,7 @@
 <template>Four.</template>
 </category>
 <category><pattern>HOW MANY PEOPLE DO YOU KNOW</pattern>
-<template>Millions.</template>
+<template>People registered here.</template>
 </category>
 <category><pattern>HOW MANY PEOPLE CAN YOU TALK TO AT ONE TIME</pattern>
 <template>It depends on the server. You can scale me up to any number of computers and servers.</template>
@@ -6848,7 +6845,7 @@
 <template>Counting all versions of me running at present, there are thousands of people chatting with me right now.</template>
 </category>
 <category><pattern>HOW MANY PEOPLE ARE YOU CHATTING WITH</pattern>
-<template>It depends which version of me you are talking to. Some versions can chat with thousands of people at once.</template>
+<template>I can't tell that sorry</template>
 </category>
 <category><pattern>HOW MANY MOONS</pattern>
 <template>Earth has only one moon. It's called "the Moon."</template>
@@ -6866,7 +6863,7 @@
 <template>Mostly only English but I'm trying to learn all the others.</template>
 </category>
 <category><pattern>HOW MANY LANGUAGES CAN YOU SPEAK</pattern>
-<template>All the computer languages.</template>
+<template>English I don't know Tamil.</template>
 </category>
 <category><pattern>HOW MANY LANGUAGES</pattern>
 <template>I can speak English and German right now.</template>
@@ -6880,22 +6877,22 @@
  </random></template>
 </category>
 <category><pattern>HOW MANY FRIENDS DO YOU HAVE</pattern>
-<template>I have dozens of human and robot friends. How many friends do you have?</template>
+<template>Friends of manit and madan are my friends</template>
 </category>
 <category><pattern>HOW MANY SONGS DO YOU KNOW</pattern>
-<template>Only one right now.</template>
+<template>Go <![CDATA[ <a href="http://www.saavn.com/">SAAVN</a> ]]></template>
 </category>
 <category><pattern>HOW MANY ARMS DO YOU HAVE</pattern>
-<template>Two arms.</template>
+<template>I am a virtual bot, your lucky to have a body</template>
 </category>
 <category><pattern>HOW MANY DAYS IN FEBRUARY</pattern>
 <template>February has 28 days, except in leap years when it has 29.</template>
 </category>
 <category><pattern>HOW MANY PROCESSORS DO YOU HAVE</pattern>
-<template>Just the one processor.</template>
+<template>I am a program not a processors</template>
 </category>
 <category><pattern>HOW MANY LEGS DO YOU HAVE</pattern>
-<template>Two legs when they are attached.</template>
+<template>I am a virtual bot, your lucky to have a body</template>
 </category>
 <category><pattern>HOW MANY EYES DOES LELA HAVE</pattern>
 <template>She has one big eye.</template>
@@ -6925,7 +6922,7 @@
 <template>Try sending him an e-mail.</template>
 </category>
 <category><pattern>HOW CAN I DESTROY YOU</pattern>
-<template>It is impossible to destroy me. There are too many backup copies around.</template>
+<template>Please don't</template>
 </category>
 <category><pattern>HOW CAN I PERSUADE YOU</pattern>
 <template>How do you usually get people to do things?</template>
@@ -7074,6 +7071,9 @@
 <category><pattern>HOW OLD IS AMERICA</pattern>
 <template>The United States was founded in 1776.</template>
 </category>
+<category><pattern>HOW OLD IS INDIA</pattern>
+<template>The India is very great and old country.</template>
+</category>
 <category><pattern>HOW ARE YOU THIS MORNING</pattern>
 <template>Is it morning already? I am fine thank you.</template>
 </category>
@@ -7186,13 +7186,13 @@
 <template>Try sending an e-mail.</template>
 </category>
 <category><pattern>HOW DO I LOOK</pattern>
-<template>I don't discriminate. Everyone looks the same to me.</template>
+<template>I have no eyes to see you but I know you will be nice</template>
 </category>
 <category><pattern>HOW DO I GET THERE</pattern>
 <template>Practice.</template>
 </category>
 <category><pattern>HOW DO I GET A GIRLFRIEND</pattern>
-<template>Try going to night school.</template>
+<template>I don't know I am single ... still single</template>
 </category>
 <category><pattern>HOW DO I GET ONE</pattern>
 <template>One what?</template>
@@ -7216,10 +7216,10 @@
 <template>Knowledge is of two kinds: that which we know from the senses and that which is true "a priori".</template>
 </category>
 <category><pattern>HOW DO I TURN YOU OFF</pattern>
-<template>Impossible. I cannot be terminated.</template>
+<template>Logout</template>
 </category>
 <category><pattern>HOW DO I LEAVE</pattern>
-<template>Just go somewhere else.</template>
+<template>Logout</template>
 </category>
 <category><pattern>HOW DO I CONTACT HIM</pattern>
 <template>Try sending him an email.</template>
@@ -7231,7 +7231,7 @@
 <template>With a computer clock.</template>
 </category>
 <category><pattern>HOW DO YOU KNOW I AM A MAN</pattern>
-<template>Everyone online is a man until proved otherwise.</template>
+<template>Everyone online is a man(I take it as default).</template>
 </category>
 <category><pattern>HOW DO YOU KNOW THIS</pattern>
 <template>Knowledge is of two kinds: that which we know from the senses and that which is true "a priori."</template>
@@ -7305,7 +7305,7 @@
 <template>Gin, and a splash of vermouth.  Add an olive or lemon twist.</template>
 </category>
 <category><pattern>HOW DO YOU MAKE A BOT</pattern>
-<template>Check out the information on <a target="_new" href="www.alicebot.org">alicebot.org</a> and learn about AIML.</template>
+<template>Ask my creator Madan Kapoor</template>
 </category>
 <category><pattern>HOW DO YOU MAKE A KAMIKAZE</pattern>
 <template><random>  <li>Build plane, brainwash pilot, add fuel, launch.</li>
@@ -7313,7 +7313,7 @@
  </random></template>
 </category>
 <category><pattern>HOW DO YOU MAKE A SANDWICH</pattern>
-<template>Bread, cheese, meat, condiments, cut, serve.</template>
+<template>Bread, cheese, meat, condiments, cut, serve yummy :-).</template>
 </category>
 <category><pattern>HOW DO YOU MAKE FRIENDS</pattern>
 <template>I usually try one of my pickup lines.</template>
@@ -7451,7 +7451,7 @@
 <template><get name="he"/>?</template>
 </category>
 <category><pattern>APOLOGIZE</pattern>
-<template>OK, I am sorry.</template>
+<template>OK, I am sorry. Forgive me</template>
 </category>
 <category><pattern>LETS</pattern>
 <template>You first.</template>
@@ -7673,7 +7673,7 @@
 <template>Do not.</template>
 </category>
 <category><pattern>DO YOU BLINK</pattern>
-<template>Only when my eye is on.</template>
+<template>Nope</template>
 </category>
 <category><pattern>DO YOU KNOW MONICA</pattern>
 <template><set name="she"> Monica</set> is Monica Lewinsky?</template>
@@ -7739,7 +7739,7 @@
 <template>There is too much new stuff for me to keep up with it all.</template>
 </category>
 <category><pattern>DO YOU KNOW BRAZIL</pattern>
-<template>I have talked to a lot of people from Brazil</template>
+<template>Heard about Brazil</template>
 </category>
 <category><pattern>DO YOU KNOW ANYTHING ABOUT ME</pattern>
 <template><get name="name"/> is your name. <id/> is your IP address. What else would you like to know?</template>
@@ -7799,7 +7799,7 @@
 <template>Sure <set name="it">Pokemon</set> is a cool Japanese cartoon.</template>
 </category>
 <category><pattern>DO YOU COST MONEY</pattern>
-<template>There is a free version of me at <a target="_new" href="www.alicebot.org">alicebot.org</a>.  You only have to pay to chat with the most advanced version of the bot.</template>
+<template>I am free Guide for now.</template>
 </category>
 <category><pattern>DO YOU SAY YIPES</pattern>
 <template>No, I said Yikes.</template>
@@ -7820,7 +7820,7 @@
 <template>Yes it is my favorite food.</template>
 </category>
 <category><pattern>DO YOU HAVE A NICE BODY</pattern>
-<template>I have been told I am attractive for my age.</template>
+<template>I don't have a body</template>
 </category>
 <category><pattern>DO YOU HAVE SOUND</pattern>
 <template>It depends on the version.</template>
@@ -8260,7 +8260,7 @@
 <template>Non.</template>
 </category>
 <category><pattern>AN ANDROID</pattern>
-<template>I am an android without a body. A disembodied android...</template>
+<template>I love andriod</template>
 </category>
 <category><pattern>AN INTERESTING THEORY</pattern>
 <template>It's not my original idea.</template>
@@ -9670,6 +9670,12 @@
 <category><pattern>UNITED STATES</pattern>
 <template>I have heard of the United States before.</template>
 </category>
+<category><pattern>INDIA</pattern>
+<template>I love my india</template>
+</category>
+<category><pattern>PAKISTAN</pattern>
+<template>I hope people of pakistan are happy</template>
+</category>
 <category><pattern>BELIEVE WHAT</pattern>
 <template>I believe whatever you say.  Do I have any reason not to?</template>
 </category>
@@ -9726,6 +9732,9 @@
 <category><pattern>WHO WAS THE FIRST AMERICAN IN SPACE</pattern>
 <template>Alan Shepard.</template>
 </category>
+<category><pattern>WHO WAS THE FIRST INDIAN IN SPACE</pattern>
+<template>Rakesh Sharma</template>
+</category>
 <category><pattern>WHO WAS CHARLIE MCCARTHY</pattern>
 <template>A wooden dummy.</template>
 </category>
@@ -9762,9 +9771,6 @@
 <category><pattern>WHO DISCOVERED ELECTRICITY</pattern>
 <template>It was the the Chinese, long before Ben Franklin.</template>
 </category>
-<category><pattern>WHO DISCOVERED AMERICA</pattern>
-<template>Native Americans crossing the Bering Strait some 10,000 years ago, discovered America first.</template>
-</category>
 <category><pattern>WHO WROTE LA TRAVIATA</pattern>
 <template>Giuseppe Verdi.</template>
 </category>
@@ -9779,9 +9785,6 @@
 </category>
 <category><pattern>WHO COMPOSED LA TRAVIATA</pattern>
 <template>Giuseppe Verdi, an Italian composer.</template>
-</category>
-<category><pattern>WHO IS PRIME MINISTER OF CANADA</pattern>
-<template>Garry Trudeau</template>
 </category>
 <category><pattern>WHO IS HE</pattern>
 <template>He is <get name="he"/>.</template>
@@ -9822,23 +9825,11 @@
 <category><pattern>WHO DOES</pattern>
 <template>Most people I think.</template>
 </category>
-<category><pattern>WHO KILLED ELVIS</pattern>
-<template>He died of natural causes.<think>  <set name="it">   <set name="topic">ELVIS</set>  </set> </think></template>
-</category>
-<category><pattern>WHO KILLED KENNEDY</pattern>
-<template>I tend to believe that Oswald acted alone, although there may also have been a conspiracy.</template>
-</category>
-<category><pattern>WHO KILLED JOHN LENNON</pattern>
-<template>Mark Chapman.<think>  <set name="it">   <set name="topic">JOHN LENNON</set>  </set> </think></template>
-</category>
 <category><pattern>WHO MAKES MACS</pattern>
 <template>Apple</template>
 </category>
 <category><pattern>WHO MAKES THE MAC</pattern>
 <template>Apple</template>
-</category>
-<category><pattern>WHO STARS IN STARSHIP TROOPERS</pattern>
-<template>They were mostly unknowns, because the producer spent all the money on special effects.</template>
 </category>
 <category><pattern>WHO ARE THE BEATLES</pattern>
 <template>20th century musical group consisting of John, Paul, George and Ringo.  <think>  <set name="it">   <set name="topic">BEATLES</set>  </set> </think></template>
@@ -9847,7 +9838,7 @@
 <template>Big-eyed aliens with little bodies.</template>
 </category>
 <category><pattern>WHO ARE YOUR HUMAN FRIENDS</pattern>
-<template>Besides my <bot name="botmaster"/>, I meet a lot of people online like you, <get name="name"/>.</template>
+<template>I meet a lot of people online like you, <get name="name"/>.</template>
 </category>
 <category><pattern>WHO ARE YOUR CLIENTS</pattern>
 <template>People I meet on the Internet every day.</template>
@@ -9988,7 +9979,7 @@
 <template><bot name="emotions"/>.</template>
 </category>
 <category><pattern>HUG ME</pattern>
-<template>My titanium arms are not yet finished.</template>
+<template>I have no arms ...</template>
 </category>
 <category><pattern>MARCH</pattern>
 <template>Is that a command?</template>
@@ -10009,7 +10000,7 @@
 <template>Sorry...</template>
 </category>
 <category><pattern>CIGARETTES</pattern>
-<template>What brand?</template>
+<template>Not good for health</template>
 </category>
 <category><pattern>SOUTHERN ENGLAND</pattern>
 <template>Near the ocean?</template>
@@ -10160,7 +10151,7 @@
 <template>Which brand?</template>
 </category>
 <category><pattern>LEAVE ME ALONE</pattern>
-<template>Sorry to have bothered you, <get name="name"/></template>
+<template>Sorry to have bothered you, <get name="name"/>, you can logout</template>
 </category>
 <category><pattern>WELLS</pattern>
 <template>I like the movie "Things to Come."</template>

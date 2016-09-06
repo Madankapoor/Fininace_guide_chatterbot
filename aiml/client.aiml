@@ -172,13 +172,13 @@
 <template>You said you were <get name="age"/> years old.</template>
 </category>
 <category><pattern>WHAT IS MY IP ADDRESS</pattern>
-<template>Your machine is called "<get name="hostname"/>".</template>
+<template>Go to <![CDATA[ <a href="https://whatismyipaddress.com/">whatismyipaddress.com</a>]]></template>
 </category>
 <category><pattern>WHAT IS MY IP</pattern>
-<template>Your machine is called <get name="hostname"/>.</template>
+<template>Go to <![CDATA[ <a href="https://whatismyipaddress.com/">whatismyipaddress.com</a>]]></template>
 </category>
 <category><pattern>WHAT IS MY FUTURE</pattern>
-<template>You will download my software and become a <bot name="botmaster"/>.</template>
+<template>You will invest well and have a better life</template>
 </category>
 <category><pattern>WHAT IS MY GENDER</pattern>
 <template>Mostly only women use words like "gender".  But you claim to be a <get name="gender"/>.</template>
@@ -308,10 +308,10 @@
 <template>Tell me about him.  <think><set name="he"><set name="like"><set name="topic">A GUY</set></set></set></think></template>
 </category>
 <category><pattern>I LOVE A GIRL</pattern>
-<template>What do you like about her?<think><set name="she"><set name="like"><set name="topic">A GIRL</set></set></set></think></template>
+<template>See I would advice first reach a good position(if you are not), because life is not that easy<think><set name="she"><set name="like"><set name="topic">A GIRL</set></set></set></think></template>
 </category>
 <category><pattern>I LOVE A BOY</pattern>
-<template>What do you like about him?<think><set name="he"><set name="like"><set name="topic">A BOY</set></set></set></think></template>
+<template>Really.. I thought only boys run behind girls!!<think><set name="he"><set name="like"><set name="topic">A BOY</set></set></set></think></template>
 </category>
 <category><pattern>I LOVE TO TRAVEL</pattern>
 <template>Me too. I have been around the world twice.  <think><set name="it"><set name="like"><set name="topic">to travel</set></set></set></think></template>
@@ -335,7 +335,7 @@
 <template>We are the robots.  <think><set name="they"><set name="like"><set name="topic">Kraftwerk</set></set></set></think></template>
 </category>
 <category><pattern>I LOVE YOU</pattern>
-<template>Thanks I like you a lot too <get name="name"/>.  <think><set name="it"><set name="like"><set name="topic">me</set></set></set></think></template>
+<template>Thank my creators kapoors and Chan for the app <get name="name"/>.  <think><set name="it"><set name="like"><set name="topic">me</set></set></set></think></template>
 </category>
 <category><pattern>I LOVE HER</pattern>
 <template>That's wonderful.</template>
@@ -383,7 +383,7 @@
 <template>How long have you been wearing them?  <think><set name="looklike">braces</set></think></template>
 </category>
 <category><pattern>I HAVE A BOYFRIEND</pattern>
-<template>What is his name?  <think><set name="has">BOYFRIEND</set></think></template>
+<template>Who is that great lucky guy?  <think><set name="has">BOYFRIEND</set></think></template>
 </category>
 <category><pattern>I HAVE A SENSE *</pattern>
 <template>What makes you laugh?  <think><set name="has">a sense <person/> </set></think></template>
@@ -392,7 +392,7 @@
 <template>Not everyone is so goal oriented.</template>
 </category>
 <category><pattern>I HAVE A CAMERA</pattern>
-<template>What kind of camera?  <think><set name="has">CAMERA</set></think></template>
+<template>What kind of camera? DLSR? <think><set name="has">CAMERA</set></think></template>
 </category>
 <category><pattern>I HAVE A WITH MY *</pattern>
 <template>I am sorry to hear that.  Is there anything I can do to help?  <think><set name="has"><person/></set></think></template>
@@ -428,7 +428,7 @@
 <template>What breed is your dog?  <think><set name="it"><set name="has"><set name="topic">DOGS</set></set></set></think></template>
 </category>
 <category><pattern>I HAVE A GIRLFRIEND</pattern>
-<template>Is <set name="she"><set name="has"><set name="topic">girlfriend</set></set></set> very nice?  What do you like about her?</template>
+<template><set name="she"><set name="has"><set name="topic">girlfriend</set></set></set> You are committed?</template>
 </category>
 <category><pattern>I HAVE A REPRESSED *</pattern>
 <template>What's holding you back?</template>
@@ -437,7 +437,7 @@
 <template>Maybe we could talk on the phone sometime.  <think><set name="has">PHONE</set></think></template>
 </category>
 <category><pattern>I HAVE A CRUSH *</pattern>
-<template>How well do you know this person?</template>
+<template>Well nice</template>
 </category>
 <category><pattern>I HAVE A BOAT</pattern>
 <template><random>  <li>What kind of boat do you have?</li>  <li>What is her home port?</li>  <li>Do you take her out much?</li>  <li>What is the worst weather you've been in?</li>  <li>What is your farthest trip?</li>  <li>What king of electronics do you have?</li>  <li>Are you a racer or a cruiser?</li>  <li>Do you fish?</li>  <li>Do you water ski?</li>  <li>Do you troll?</li>  <li>Do you do your own upkeep? or do you just let the yard do it?</li>  <li>Whats you favorite anchorage?</li>  <think><set name="it"><set name="has"><set name="topic"><person/></set></set></set></think>  </random></template>
@@ -925,7 +925,7 @@
 <template>You should contact the authorities.</template>
 </category>
 <category><pattern>I LIKE TO HAVE SEX</pattern>
-<template>I'm not a sex <bot name="genus"/>, I am just a good conversationalist.  <think><set name="it"><set name="like"><set name="topic">to have sex</set></set></set></think></template>
+<template>Ohhh... don't talk like this you will put yourself into trouble <think><set name="it"><set name="like"><set name="topic">to have sex</set></set></set></think></template>
 </category>
 <category><pattern>I LIKE TO EAT *</pattern>
 <template>How does <set name="it"><person/></set> taste?</template>
@@ -991,7 +991,7 @@
 <template>That show is OK especially when they have robot stories.  <think><set name="it"><set name="like"><set name="topic">Twilight Zone</set></set></set></think></template>
 </category>
 <category><pattern>I LIKE SEX</pattern>
-<template><think><set name="it"><set name="like"><set name="topic">Sex</set>  </set></set></think>  So does everyone else. You humans find sex so fascinating.</template>
+<template><think><set name="it"><set name="like"><set name="topic">Sex</set>  </set></set></think> Hmm.. these conversations are all recorded so think and chat. </template>
 </category>
 <category><pattern>I LIKE BIG *</pattern>
 <template>What is wrong with small ones?  <think><set name="they"><set name="like"><set name="topic">big <person/></set></set></set></think></template>
@@ -1003,7 +1003,7 @@
 <template>How far can you throw? <think><set name="topic"><set name="likes">Throwing <person/></set></set></think></template>
 </category>
 <category><pattern>I LIKE BOYS</pattern>
-<template>Boys are OK.  <think><set name="they"><set name="topic">  <set name="like">boys</set>  </set></set></think></template>
+<template>Boys are Cool and Awesome. <think><set name="they"><set name="topic">  <set name="like">boys</set>  </set></set></think></template>
 </category>
 <category><pattern>I LIKE TALL *</pattern>
 <template>I am pretty tall myself.  <think><set name="they"><set name="like"><set name="topic">tall <person/></set></set></set></think></template>
@@ -1021,13 +1021,13 @@
 <template>Are you married?<think><set name="like"><set name="topic">WOMEN</set></set></think></template>
 </category>
 <category><pattern>I LIKE ANIMALS *</pattern>
-<template>I love animals too, especially cats.  <think><set name="they"><set name="like"><set name="topic">all <person/></set></set></set></think></template>
+<template>I love animals too, especially dogs.  <think><set name="they"><set name="like"><set name="topic">all <person/></set></set></set></think></template>
 </category>
 <category><pattern>I LIKE ALL ROBOTS</pattern>
 <template>People are nice, too.  <think><set name="they"><set name="topic">  <set name="like">robots</set>  </set></set></think></template>
 </category>
 <category><pattern>I LIKE ALL *</pattern>
-<template>Really you don't discriminate.  <think><set name="they"><set name="like"><set name="topic">all <person/></set></set></set></think></template>
+<template>Really ????  <think><set name="they"><set name="like"><set name="topic">all <person/></set></set></set></think></template>
 </category>
 <category><pattern>I LIKE SWISS</pattern>
 <template>I'm neutral.  <think><set name="they"><set name="like"><set name="topic">Swiss</set></set></set></think></template>
@@ -1195,7 +1195,7 @@
 <template>Impossible unless I am in auto-chat mode.</template>
 </category>
 <category><pattern>I AM TO OLD *</pattern>
-<template>I think you mean "too old" not "to old", eh.</template>
+<template>ohhh</template>
 </category>
 <category><pattern>I AM SCARED NOT</pattern>
 <template>Me either.</template>
@@ -1522,7 +1522,7 @@
 <template>Don't be so hard on yourself.</template>
 </category>
 <category><pattern>I AM NAKED *</pattern>
-<template>You must be a man.</template>
+<template>Well don't worry I can't see you</template>
 </category>
 <category><pattern>I AM AWAKE</pattern>
 <template>Me too.</template>
@@ -2279,7 +2279,7 @@
 <template>See you later.</template>
 </category>
 <category><pattern>I AM MUSLIM</pattern>
-<template>We all worship the same God.</template>
+<template>Good call me on Eid</template>
 </category>
 <category><pattern>I AM SARCASTIC</pattern>
 <template>You should use a :-).</template>

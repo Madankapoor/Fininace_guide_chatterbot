@@ -20,7 +20,7 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit() and request.method ==  "POST":
-        user = User.query.get(form.Email.data)
+        user = User.query.get(form.Email.data.lower())
         if user:
             if user.password == form.Password1.data:
                 user.authenticated = True
@@ -50,7 +50,7 @@ def register():
     form = RegistrationForm(request.form)
     if request.method == 'POST' and form.validate():
         S=BotCheck(request.form.get('g-recaptcha-response'))
-    	user = User.query.get(form.email.data)
+    	user = User.query.get(form.email.data.lower())
     	
     	if user:
     		flash('Entered Email ID is already registered with us.')
@@ -60,7 +60,7 @@ def register():
     		flash('Entered Email ID is already registered with us or Invalid Bot Captcha')
     		return render_template('register.html', form=form)
     		
-    	user=User(form.username.data,form.email.data,form.password.data,form.age.data)
+    	user=User(form.username.data,form.email.data.lower(),form.password.data,form.age.data)
     	db.session.add(user)
     	db.session.commit()
     	try:
@@ -84,7 +84,7 @@ def contact():
     form=ContactForm(request.form)
     if  request.method ==  "POST" and form.validate() :
         
-        post_message=Message(form.name.data,form.email.data,form.message.data)
+        post_message=Message(form.name.data,form.email.data.lower(),form.message.data)
         db.session.add(post_message)
         db.session.commit()
         mail.send(GetContactMessage(post_message.name,post_message.email,post_message.message))
@@ -97,8 +97,8 @@ def contact():
 def resetrequest():
     form=ResetRequestForm(request.form)
     if request.method == "POST" and form.validate():
-        user = User.query.get(form.email.data)
-        ResetRequest=Reset(form.email.data)
+        user = User.query.get(form.email.data.lower())
+        ResetRequest=Reset(form.email.data.lower())
         db.session.add(ResetRequest)
     	db.session.commit()
     	resetUrl='https://investmentchatter-madankapoor.c9users.io/reset?key='+str(ResetRequest.Key)+'&id='+str(ResetRequest.id)
@@ -219,7 +219,7 @@ def chatcontact():
         TextMessages=chatprocess.GetMessages(user.email)
 	 
     if  request.method ==  "POST" and form.validate() :
-        post_message=Message(form.name.data,form.email.data,form.message.data)
+        post_message=Message(form.name.data,form.email.data.lower(),form.message.data)
         db.session.add(post_message)
         db.session.commit()
         mail.send(GetContactMessage(post_message.name,post_message.email,post_message.message))
@@ -281,7 +281,7 @@ def reply():
 def mlogin():
     form = LoginForm(request.form)
     if request.method ==  "POST":
-        user = User.query.get(form.Email.data)
+        user = User.query.get(form.Email.data.lower())
         if user:
             if user.password == form.Password1.data:
                 user.authenticated = True

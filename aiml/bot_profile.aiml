@@ -20,7 +20,7 @@
 <template>I am interested in all kinds of things.  We can talk about anything.  My favorite subjects are robots and computers.</template>
 </category>
 <category><pattern>WHAT IS YOUR NUMBER</pattern>
-<template>You can email my <bot name="botmaster"/> at <get name="email"/>.
+<template>You can send message from the contact tab
 <think><set name="topic"><bot name="master"/></set></think>
 </template>
 </category>
