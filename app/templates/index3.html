@@ -77,15 +77,16 @@
 	  <div id="chat-dialog" title="Basic dialog">
 		<form method="post" action="javascript:GetReply()" >
 		<div id= "chat-textarea" >
-		{% from "_formhelpers.html" import render_message %}
+		{% from "_formhelpers.html" import render_message,render_welcome_message %}
         {% for x in messages %}
         	{{ render_message(x) }}
         {% endfor %}
-    	
+        {{ render_welcome_message() }}
     	</div><br>
 		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
 		<div class="chat-submit-container">
 		<button class="chat-clear-button" type="button"  value="clear" onclick="chatclear()"/>Clear</button>
+		<button class="chat-article-button" type="button"  value="article" onclick="openarticles()"/>Articles</button>
 		<input class="chat-submit-button" type="submit" value="Send" />
 	 </div>
 	

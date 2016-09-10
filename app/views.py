@@ -6,6 +6,7 @@ from models import User,Message,Reset
 import chatprocess
 import random
 from flask_login import  login_required, login_user, logout_user, current_user
+from hashinfo import Tags
 
 @login_manager.user_loader
 def user_loader(user_id):
@@ -255,6 +256,17 @@ def reply():
     else:
         userreply=request.args.get('message_box')
     sr=""
+    
+    if '#'== userreply[0]:
+        tag=userreply[1::].lower()
+        if tag in Tags.keys():
+            try:
+                chatprocess.add(current_user.email,userreply,Tags[tag])
+            except:
+                print('Error in saving the chat')
+            
+            return Tags[tag]
+        
     if request.cookies.get('SessionID'):
         SessionID=request.cookies.get('SessionID')
         sr=kernel.respond(userreply,SessionID)
@@ -309,4 +321,3 @@ def mlogout():
     db.session.commit()
     logout_user()
     return "Success"
-
