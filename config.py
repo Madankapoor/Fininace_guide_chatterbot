@@ -11,5 +11,5 @@ SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 MAIL_SERVER='smtp.gmail.com'
 MAIL_PORT = 465
 MAIL_USERNAME = 'finchatbot@gmail.com'
-MAIL_PASSWORD = '52473611'
+MAIL_PASSWORD = '524736111'
 MAIL_USE_SSL = True

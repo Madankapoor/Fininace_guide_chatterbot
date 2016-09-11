@@ -75,19 +75,30 @@
 	</footer>
 	<!-- start: dialogs -->
 	  <div id="chat-dialog" title="Basic dialog">
-		<form method="post" action="javascript:GetReply()" >
-		<div id= "chat-textarea" >
-		{% from "_formhelpers.html" import render_message,render_welcome_message %}
-        {% for x in messages %}
-        	{{ render_message(x) }}
-        {% endfor %}
-        {{ render_welcome_message() }}
-    	</div><br>
-		<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
-		<div class="chat-submit-container">
-		<button class="chat-clear-button" type="button"  value="clear" onclick="chatclear()"/>Clear</button>
-		<button class="chat-article-button" type="button"  value="article" onclick="openarticles()"/>Articles</button>
-		<input class="chat-submit-button" type="submit" value="Send" />
+		<ul class="nav nav-tabs">
+  			<li class="active"><a data-toggle="tab" href="#Chat">Chat</a></li>
+		</ul>
+		<div class="tab-content" style="padding:0px 0px 0px 0px;">
+  			<div id="Chat" class="tab-pane fade in active">
+				<form method="post" action="javascript:GetReply()" >
+					<div id= "chat-textarea" >
+					{% from "_formhelpers.html" import render_message,render_welcome_message %}
+			        {% for x in messages %}
+			        	{{ render_message(x) }}
+			        {% endfor %}
+			        {{ render_welcome_message() }}
+			    	</div><br>
+				<input class="chat-form-field" id="message_box" type="text" name="message_box" autocomplete="off" autofocus  /> 
+					<div class="chat-submit-container">
+						<button class="chat-clear-button" type="button"  value="clear" onclick="chatclear()"/>Clear</button>
+						<input class="chat-submit-button" type="submit" value="Send" />
+					</div>
+				</form>
+					
+		 	</div>
+		 	
+		  
+		</div>
 	 </div>
 	
 	 <!-- start: Java Script -->
@@ -117,7 +128,7 @@
 	<script src="{{ url_for('static', filename='assets/js/jquery.dialogextend.min.js') }}" ></script>
 	<script type="text/javascript"  src="{{ url_for('static', filename='assets/js/chatprocess.js') }}" ></script>
 	<script type="text/javascript">	
-		var uisetting="border: 2px solid #f2e3d2;background: #eeeeee;background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); 	background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); 	background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 100%); 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );   -webkit-border-radius: 26px;   -moz-border-radius: 26px;   border-radius: 26px;   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   font-family: 'Helvetica Neue',Helvetica,sans-serif;   text-decoration: none;   vertical-align: middle;   min-width:300px;   padding:40px;   width:1000px;"
+		var uisetting="border: 2px solid #f2e3d2;background: #eeeeee;background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); 	background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); 	background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 100%); 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );   -webkit-border-radius: 26px;   -moz-border-radius: 26px;   border-radius: 26px;   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 1px 0;   font-family: 'Helvetica Neue',Helvetica,sans-serif;   text-decoration: none;   vertical-align: middle;   min-width:300px;   padding:25px;   width:1000px;"
 		var prevsetting;
 		$(function() {
 			
@@ -235,11 +246,11 @@
 							 prevsetting=$('.ui-dialog').css('cssText');
 							 $('.ui-dialog').css('cssText',uisetting);
 								},
-							 "beforeMinimize" : function(evt, dlg){ $('.ui-dialog').css('cssText',prevsetting); },
-							 "beforeMaximize":	function(evt, dlg){ $('.ui-dialog').css('cssText',uisetting);  },
+							 "beforeMinimize" : function(evt, dlg){ $('#chat-dialog').parent().css('cssText',prevsetting); },
+							 "beforeMaximize":	function(evt, dlg){ $('#chat-dialog').parent().css('cssText',uisetting);  },
 				
-							 "beforeCollapse" : function(evt, dlg){ $('.ui-dialog').css('cssText',prevsetting); },
-							"beforeRestore" : function(evt, dlg){ $('.ui-dialog').css('cssText',uisetting);  },
+							 "beforeCollapse" : function(evt, dlg){ $('#chat-dialog').parent().css('cssText',prevsetting); },
+							"beforeRestore" : function(evt, dlg){ $('#chat-dialog').parent().css('cssText',uisetting);  },
 							
 							
 								
@@ -248,8 +259,9 @@
 					
 			$('#chat-textarea').animate({scrollTop: $('#chat-textarea').get(0).scrollHeight}, 500);	
 		
-				
+		
 		});
+		
 		
 			var Plook=true;	
 		 //Function used to get reply
