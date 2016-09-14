@@ -242,10 +242,10 @@
 <category><pattern>IS SOVEREIGN GOLD BONDS GOOD FOR ME?</pattern>
 <template><srai>SHOULD I GO FOR SOVEREIGN GOLD BONDS?</srai></template>
 </category>
-<category><pattern></pattern>
-<template></template>
+<category><pattern>WHAT SHARES SHOULD I BUY</pattern>
+<template>Direct Investment is quite risky!!!</template>
 </category>
-<category><pattern></pattern>
-<template></template>
+<category><pattern>CAN I BUY SHARES</pattern>
+<template><srai>WHAT SHARES SHOULD I BUY</srai></template>
 </category>
 </aiml>

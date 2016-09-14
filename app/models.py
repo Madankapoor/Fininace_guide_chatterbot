@@ -69,7 +69,7 @@ class Reset(db.Model):
     def __init__(self ,email):
         self.email = email
         self.time =datetime.utcnow()
-        self.Key = random.randrange(0,7897984561)
+        self.Key = random.randrange(0,2147483647)
     
     def get_id(self):
         return self.id  # python 2

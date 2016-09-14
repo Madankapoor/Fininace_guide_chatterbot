@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1">
+	<category>
+		<pattern>WHAT IS FINANCIAL LITERACY</pattern>
+		<template>According to the wikis,Financial literacy is the ability to understand how money works in the world: how someone manages to earn or make it, how that person manages it, how he/she invests it (turn it into more) and how that person donates it to help others. More specifically, it refers to the set of skills and knowledge that allows an individual to make informed and effective decisions with all of their financial resources.Raising interest in personal finance is now a focus of state-run programs in countries including Australia, Canada, Japan, the United States and the UK.</template>
+	</category>
+	<category>
+		<pattern>DEFINE FINANCIAL LITERACY</pattern>
+		<template><srai>WHAT IS FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHAT IS MEANING OF FINANCIAL LITERACY</pattern>
+		<template><srai>WHAT IS FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHAT DOES THE TERM FINANCIAL LITERACY MEAN</pattern>
+		<template><srai>WHAT IS FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>TELL ME ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>WHAT IS FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>STATE THE MEANING OF FINANCIAL LITERACY</pattern>
+		<template><srai>WHAT IS FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHY DO WE NEED FINANCIAL LITERACY</pattern>
+		<template>Many people are failing to plan ahead.Many people are taking on financial risks without realising it.Problems of debt are severe for a small proportion of the population, and many more people may be affected in an economic downturn.The under-40s are, on average, less financially capable than their elders."In short, unless steps are taken to improve levels of financial capability, we are storing up trouble for the future."</template>
+	</category>
+	<category>
+		<pattern>WHY SHOULD I STUDY FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHY SHOULD I LEARN ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>IS IT REALLY ESSENTIAL TO STUDY ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>IS IT REALLY WORTH IT TO STUDY FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHY DO WE NEED TO STUDY ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>WHY SHOULD WE STUDY ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>WHY DO WE NEED FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>EXPLAIN FINANCIAL LITERACY IN SHORT</pattern>
+		<template>Please Refer to learning section.</template>
+	</category>
+	<category>
+		<pattern>INTRODUCTION ON FINANCIAL LITERACY</pattern>
+		<template><srai>EXPLAIN FINANCIAL LITERACY IN SHORT</srai></template>
+	</category>	<category>
+		<pattern>* * I buy *</pattern>
+		<template>Please Refer to Decision making section.</template>
+	</category>
+	<category>
+		<pattern>* * I purchase</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category>	<category>
+		<pattern>* * I sell</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category>	<category>
+		<pattern>* * * I sell</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category>	<category>
+		<pattern>* * * I buy *</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category>	<category>
+		<pattern>* * * I buy *</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category>	<category>
+		<pattern>* * * I purchase *</pattern>
+		<template><srai>* * I buy *</srai></template>
+	</category></aiml>

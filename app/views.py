@@ -8,15 +8,17 @@ import random
 from flask_login import  login_required, login_user, logout_user, current_user
 from hashinfo import Tags
 
+# Helper Function
 @login_manager.user_loader
 def user_loader(user_id):
 	return User.query.get(user_id)
-
+#Main directory with out login
 @app.route('/')
 @app.route('/Home')
 def index():
     return render_template("Home.html")
 
+#Login Directory
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
@@ -35,6 +37,8 @@ def login():
         	flash("Please register as the entered Email ID doesn exists.")
     return render_template("login.html",form=form)
 
+
+#Logout Directory
 @app.route("/logout", methods=["GET"])
 @login_required
 def logout():
@@ -99,6 +103,9 @@ def resetrequest():
     form=ResetRequestForm(request.form)
     if request.method == "POST" and form.validate():
         user = User.query.get(form.email.data.lower())
+        if user is None:
+            flash("Entered email is not registerd,please check the email or register.")
+            return redirect(url_for('resetrequest'))
         ResetRequest=Reset(form.email.data.lower())
         db.session.add(ResetRequest)
     	db.session.commit()
@@ -108,11 +115,11 @@ def resetrequest():
         return redirect(url_for('login'))
     return render_template("resetrequest.html",form=form)
 
+#Checking the request for validity
 def CheckRequest(Id,KEY):
     row=Reset.query.get(Id)
     if row is None:
         return 0
-    
     if row.Key == KEY and row.get_validity():
         return 1
     else:
@@ -245,7 +252,7 @@ def replyalone():
 		else:
 			sr=kernel.respond(request.args.get('message_box'))
 		resp = make_response(sr)
-		resp.set_cookie('SessionID', '1234')
+		resp.set_cookie('SessionID', str(random.randint(1,999999)))
 	return resp
 
 @app.route('/reply',methods=['GET','POST'])

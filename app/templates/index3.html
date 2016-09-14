@@ -76,9 +76,14 @@
 	<!-- start: dialogs -->
 	  <div id="chat-dialog" title="Basic dialog">
 		<ul class="nav nav-tabs">
+  			<li ><a data-toggle="tab" href="#Start">Getting Started</a></li>
   			<li class="active"><a data-toggle="tab" href="#Chat">Chat</a></li>
+  			<li ><a data-toggle="tab" href="#Learn">Learning</a></li>
+  			<li ><a data-toggle="tab" href="#Decision">Decision Making</a></li>
+  			<li ><a data-toggle="tab" href="#Help">Help</a></li>
 		</ul>
-		<div class="tab-content" style="padding:0px 0px 0px 0px;">
+		<!-- TAb1 -->
+		<div class="tab-content" style="padding:1px 1px 1px 1px;">
   			<div id="Chat" class="tab-pane fade in active">
 				<form method="post" action="javascript:GetReply()" >
 					<div id= "chat-textarea" >
@@ -97,8 +102,124 @@
 					
 		 	</div>
 		 	
-		  
-		</div>
+		 	<div id="Help" class="tab-pane fade">
+		 		<div style="border:2px white solid;border-radius: 6px;padding:10px;background-color:white;">
+		 		<h3>Help.Please use the contact us section for help.</h3>
+		 			<ol class="list-group">
+		 			<li class="list-group-item">Use the Chat interface and experiment with it.As the bot is in development if you find any issues please contact us using the contact us Section.</li>
+		 			<li class="list-group-item">Check out the various tabs.</li>
+		 			<li class="list-group-item">Read Articles on various topics and get to know about mutual funds.</li>
+		 			<li class="list-group-item">Start Learning about finance and start planning your future.</li>
+		 		</ul>
+		 		</div>
+		 	</div>	
+		 
+		 
+		 	<div id="Start" class="tab-pane fade">
+		 		<div style="text-align:center;padding-bottom:5px;background-color:white;border-radius:6px;">
+		 			<h3>Let get started.Please watch our introductory video.</h3>
+		 		<video controls style="border-radius: 6px;
+									   border: 2px solid rgba(0,0,0,0.8);
+									   box-shadow: 0 0 5px rgba(0,0,0,0.5);">
+		 			<source src="static/videos/intro.mp4" type="video/mp4">
+		 		</video>
+		 		</div>
+		 		
+		 	</div>	
+		 	
+		 	<div id="Decision" class="tab-pane fade ">
+		 		<div style="border:2px white solid;border-radius: 6px;padding:10px;background-color:white;">
+		 		
+		 	
+		 		
+		 		
+		 		
+				<div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+					    <div class="panel-heading" style="text-align:center">
+					      <h3 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+					        	Should I buy this ?</a>
+					      </h3>
+					    </div>
+					    <div id="collapse1" class="panel-collapse collapse in">
+					      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+					      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					      commodo consequat.</div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" style="text-align:center">
+					      <h3 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+					        
+		 		Should I invest in this scheme?</a>
+					      </h3>
+					    </div>
+					    <div id="collapse2" class="panel-collapse collapse">
+					      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+					      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					      commodo consequat.</div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" style="text-align:center">
+					      <h3 class="panel-title" >
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+					        
+		 		Should I get this policy?</a>
+					      </h3>
+					    </div>
+					    <div id="collapse3" class="panel-collapse collapse">
+					      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+					      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					      commodo consequat.</div>
+					    </div>
+					  </div>
+					</div>
+		 			
+		 		</div>
+		 	</div>
+		 	
+
+		 	<div id="Learn" class="tab-pane fade ">
+		 		<div style="border:2px white solid;padding:10px;background-color:white;">
+		 		<h3>Articles to glimpse upon</h3>
+		 		<a href="https://en.wikipedia.org/wiki/Financial_literacy" class="external-link" target="_blank">Financial Literacy</a><br>
+		 		<a href="http://www.pbs.org/your-life-your-money/more/what_is_financial_literacy.php" class="external-link" target="_blank">What Is Financial Literacy?</a><br>
+				<a href="http://siteresources.worldbank.org/INTFR/Resources/Ziaetl030309.pdf" class="external-link" target="_blank">The Value of Financial Literacy</a><br>
+				<a href="http://www.ideasforindia.in/article.aspx?article_id=394" class="external-link" target="_blank">Why learning Financial Literacy Matters</a><br>
+		 		<br>
+		 		<h3> Courses on Financial literacy</h3>
+		 		<ul>
+                <li><a href='https://alison.com/courses/Financial-Literacy' class="external-link" target="_blank">Alison </a></li>
+                <li><a href='https://www.open2study.com/courses/financial-literacy' class="external-link" target="_blank">Open2Study</a></li>
+                <li><a href='http://www.cicmoney101.org/Course-Catalog/Income.aspx' class="external-link" target="_blank" >Cicmoney</a> </li>
+                <br>
+                </ul>
+                <h3>Mutal Funds :Getting Started with mutual funds</h3>
+                <ul>
+                <li><a href="http://www.franklintempletonindia.com/en_IN/investor/investor-education/fund-basics/how-mutual-funds-work" class="external-link" target="_blank">What are mutual funds?</a></li>
+		 		<li><a href="http://www.franklintempletonindia.com/" class="external-link" target="_blank">Franklin Templaton Investments</a></li>
+		 		<li><a href="https://www.valueresearchonline.com/" class="external-link" target="_blank">Complete guide on mutual funds Value Research.</a></li>
+		 		
+		 		<li><a href="http://www.moneylife.in/article/why-people-lose-money-in-mutual-funds/30231.html" class="external-link" target="_blank">Why people lose money in mutual funds?</a></li>
+		 		<br>
+		 		</ul>
+		 		
+		 		<h3>Mutal Fund Investors</h3>
+                <ul>
+                <li><a href="http://www.planmoneytax.com/top-10-best-mutual-funds-in-india-for-2015/" class="external-link" target="_blank">Top 10 in India</a></li>
+		 		<li><a href="http://www.moneycontrol.com/mutualfundindia/" class="external-link" target="_blank">Best mutual funds to buy</a></li>
+		 		<br>
+		 		</ul>
+		 		</div>
+		 	</div>
+		 </div>
+		
 	 </div>
 	
 	 <!-- start: Java Script -->
