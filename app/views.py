@@ -109,7 +109,7 @@ def resetrequest():
         ResetRequest=Reset(form.email.data.lower())
         db.session.add(ResetRequest)
     	db.session.commit()
-    	resetUrl='https://investmentchatter-madankapoor.c9users.io/reset?key='+str(ResetRequest.Key)+'&id='+str(ResetRequest.id)
+    	resetUrl='https://finchatbot.herokuapp.com/reset?key='+str(ResetRequest.Key)+'&id='+str(ResetRequest.id)
     	mail.send(GetPasswordResetMessage(user.name,user.email,resetUrl))
         flash('Check you mail to reset you password and login in here to continue.')
         return redirect(url_for('login'))
