@@ -1,15 +1,17 @@
 # Fininace_guide_chatterbot
 A guide to common man for financial investments using chatterbot.
+
 Software:
-    Flask microframework.
+>Flask microframework.
+
 Tags:
-    Python,Cython,Postgresql,Sqlite
+>Python,Cython,Postgresql,Sqlite
 
 Website:
-    https://finchatbot.herokuapp.com/
+>https://finchatbot.herokuapp.com/
 
 Repo Structure
-
+```
 Procfile                        Configuration Setting for Heroku Cloud
 README.md                       This File.    
 Structure                       Structure of the Repo    
@@ -70,3 +72,4 @@ Application HTML pages.
     tag.html
     team.html
     teaml.html
+```
