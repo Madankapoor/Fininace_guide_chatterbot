@@ -71,52 +71,91 @@
 		<pattern>* * * I purchase *</pattern>
 		<template><srai>* * I buy *</srai></template>
 	</category>	<category>
-		<pattern>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</pattern>
+		<pattern>GIVE ME SOME IDEA ABOUT?</pattern>
 		<template><random>
 			<li>Financial literacy is the ability to understand how money works: how someone makes, manages and invests it, and also expends it (especially when one donates to charity) to help others.In-depth knowledge of financial literacy is required to understand how money works and how it can work for you – even when you’re sleeping – by investing in profitable areas like the stock or money market. To understand money and how it works, it’s important to understand common financial literacy principles such as; financial goals, budgeting, investments, superannuation, contracts and employment models.</li>
 			<li>Financial literacy is the ability to understand how money works in the world: how someone manages to earn or make it, how that person manages it, how he/she invests it (turn it into more) and how that person donates it to help others.</li>
 		</random></template>
 	</category>
 	<category>
+		<pattern>GIVE ME A IDEA ABOUT FINANCAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>EXPLAIN ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>IDEA ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>TELL ME ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>CAN YOU TELL ME ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>COULD YOU TELL ME ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>PLEASE TELL ME ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE ME A ROUGH IDEA ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>EXPLAIN ME THE IDEA ABOUT FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>ELABORATE ON FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE ELABORATE EXPLANATION ON FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE BRIEF EXPLANATION ON FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE SMALL EXPLANATION ON FINANCIAL LITERACY?</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE ME SOME IDEA ABOUT </pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
+		<pattern>GIVE ME A IDEA ABOUT FINANCAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category>	<category>
 		<pattern>EXPLAIN ABOUT FINANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>IDEA ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>IDEA ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>TELL ME ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>TELL ME ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>CAN YOU TELL ME ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>CAN YOU TELL ME ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>COULD YOU TELL ME ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>COULD YOU TELL ME ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>PLEASE TELL ME ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>PLEASE TELL ME ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>GIVE ME A ROUGH IDEA ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>GIVE ME A ROUGH IDEA ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>EXPLAIN ME THE IDEA ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>EXPLAIN ME THE IDEA ABOUT FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>ELABORATE ON FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>ELABORATE ON FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>GIVE ELABORATE EXPLANATION ON FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>GIVE ELABORATE EXPLANATION ON FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>GIVE BRIEF EXPLANATION ON FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+		<pattern>GIVE BRIEF EXPLANATION ON FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
 	</category>	<category>
-		<pattern>GIVE SMALL EXPLANATION ON FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
-	</category>	<category>
-		<pattern>GIVE ME SOME IDEA ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
-	</category>	<category>
-		<pattern>TELL ME ABOUT FINIANCIAL LITERACY</pattern>
-		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
-</category></aiml>
+		<pattern>GIVE SMALL EXPLANATION ON FINANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME SOME IDEA ABOUT?</srai></template>
+	</category></aiml>
