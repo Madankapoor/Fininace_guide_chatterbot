@@ -1,15 +1,17 @@
 # Fininace_guide_chatterbot
 A guide to common man for financial investments using chatterbot.
+
 Software:
-    Flask microframework.
+>Flask microframework.
+
 Tags:
-    Python,Cython,Postgresql,Sqlite
+>Python,Cython,Postgresql,Sqlite
 
 Website:
-    https://finchatbot.herokuapp.com/
+>https://finchatbot.herokuapp.com/
 
 Repo Structure
-
+```
 Procfile                        Configuration Setting for Heroku Cloud
 README.md                       This File.    
 Structure                       Structure of the Repo    
@@ -23,11 +25,11 @@ db_downgrade.py                 Used to downgrade the Database Migration Repo
 db_migrate.py                   Used to Reflect the changes made in models to Database - Produce Migration
 db_repository/                  Interior of Migration Repo
 db_upgrade.py                   Used to Upgrade the Database Migration Repo     
-dep-aiml/                       Depency Files of Aiml
+dep-aiml/                       Dependency Files of Aiml
 deploy.sh                       Script to Deploy the Application to Heroku
 investment.aiml                 
 makec.sh                        Used for building Application Depency
-requirements.txt                List of Depency of the Application.
+requirements.txt                List of Dependency of the Application.
 run.sh                          Script Used to start the application in debug mode.
 std-startup.xml                 Xml configuration of the BOT
 test.py                         Unit Tests 
@@ -70,3 +72,4 @@ Application HTML pages.
     tag.html
     team.html
     teaml.html
+```
