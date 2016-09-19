@@ -113,4 +113,10 @@
 	</category>	<category>
 		<pattern>GIVE SMALL EXPLANATION ON FINIANCIAL LITERACY</pattern>
 		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
-	</category></aiml>
+	</category>	<category>
+		<pattern>GIVE ME SOME IDEA ABOUT FINIANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+	</category>	<category>
+		<pattern>TELL ME ABOUT FINIANCIAL LITERACY</pattern>
+		<template><srai>GIVE ME A IDEA ABOUT FINANCIAL LITERACY</srai></template>
+</category></aiml>
