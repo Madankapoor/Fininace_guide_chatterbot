@@ -6,34 +6,38 @@
     </category>
     <category>
         <pattern>SOME OF THE BEST MUTUAL FUND COMPANIES</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>SOME OF THE TOP MUTUAL FUND COMPANIES</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>TOP * MUTUAL FUND COMPANIES</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>GOOD MUTUAL FUND COMPANIES</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>TOP MUTUAL FUNDS BASED ON * </pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>TELL ME SOME OF THE BEST MUTUAL FUNDS</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
         <pattern>STATS ON MUTUAL FUNDS</pattern>
-        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
     <category>
-        <pattern>WHERE CAN I GET BEST FUNS</pattern>
-        <template>TRY HERE<srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+        <pattern>WHERE CAN I GET BEST FUNDS</pattern>
+        <template>TRY HERE<srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
+    </category>
+    <category>
+        <pattern>TOP MUTUAL FUNDS</pattern>
+        <template>TRY HERE<srai>TOP PERFORMING MUTUAL FUNDS</srai></template>
     </category>
 </aiml>
