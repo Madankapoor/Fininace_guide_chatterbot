@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1">
+    <category>
+        <pattern>TOP PERFORMING MUTUAL FUNDS</pattern>
+        <template>Just See her cool site <![CDATA[ <iframe src="https://www.mutualfundindia.com/"></iframe> ]]> </template>
+    </category>
+    <category>
+        <pattern>SOME OF THE BEST MUTUAL FUND COMPANIES</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>SOME OF THE TOP MUTUAL FUND COMPANIES</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>TOP * MUTUAL FUND COMPANIES</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>GOOD MUTUAL FUND COMPANIES</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>TOP MUTUAL FUNDS BASED ON * </pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>TELL ME SOME OF THE BEST MUTUAL FUNDS</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>STATS ON MUTUAL FUNDS</pattern>
+        <template><srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+    <category>
+        <pattern>WHERE CAN I GET BEST FUNS</pattern>
+        <template>TRY HERE<srai>TOP PERFORMING MUTUAL FUNDS</srai><template>
+    </category>
+</aiml>
