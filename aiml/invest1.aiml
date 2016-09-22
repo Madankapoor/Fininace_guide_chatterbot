@@ -79,4 +79,16 @@
         <pattern>HOW TO CLAIM MY SHARES</pattern>
         <template>Your Demat account claims it.  Every shareholder will have a Dematerialized account for the purpose of transacting shares.</template>
     </category>
+    <category>
+        <pattern>HOW TO GET A DEMAT ACCOUNT</pattern>
+        <template>Dematerialized account is opened by the investor while registering with an investment broker. Look <![CDATA[ <a href="https://www.kotaksecurities.com/ksweb/Research/Investment-Knowledge-Bank/what-is-demat-account">HERE</a> ]]> </template>
+    </category>
+    <category>
+        <pattern>WHERE DO I GET BONUS</pattern>
+        <template>if you get a bonus, it gets transfered to your associated bank account</template>
+    </category>
+    <category>
+        <pattern>What are the different types of stocks</pattern>
+        <template>There are of two types. Common and Prefered Stocks. See <![CDATA[ <a href="http://www.investopedia.com/university/stocks/stocks2.asp">HERE</a>]]> </template>
+    </category>
 </aiml>
