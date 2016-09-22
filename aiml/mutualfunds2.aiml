@@ -2,7 +2,7 @@
 <aiml version="1.0.1">
     <category>
         <pattern>TOP PERFORMING MUTUAL FUNDS</pattern>
-        <template>Just See her cool site <![CDATA[ <iframe src="https://www.mutualfundindia.com/"></iframe> ]]> </template>
+        <template>Just See here cool site <![CDATA[ <a href="https://www.mutualfundindia.com/">SITE</a> ]]> </template>
     </category>
     <category>
         <pattern>SOME OF THE BEST MUTUAL FUND COMPANIES</pattern>

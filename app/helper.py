@@ -1,9 +1,10 @@
 from flask_mail import Message
 import requests
 import json
-
+import random
 team=['madankapoor10@gmail.com','manitkapoor2@gmail.com','chandrasoodan1996@gmail.com'];
-
+factsloaded=False
+facts=[]
 def GetWelcomeMessage(Name,email):
    msg = Message('Welcome to Finchatbot Services', sender = 'finchatbot@gmail.com', recipients = [email])
    msg.body = "Welcome "+Name+" \nWe are Glad that you have registered and you are using our chat bot service,please contact us through the link below if you find any problems in our bot.\nThanking You.\n\n"+"https://finchatbot.herokuapp.com/contact"
@@ -25,3 +26,17 @@ def BotCheck(captcha):
    r = requests.post("https://www.google.com/recaptcha/api/siteverify", data={'secret': site, 'response': captcha})
    D = json.loads(r.text)
    return D['success']
+
+
+def getfacts():
+   if(len(facts)==0):
+      Fp=open('./app/data/facts.html','r')
+      for x in Fp:
+         facts.append(x)
+      Fp.close()
+      factsloaded=True;
+   num=random.randint(0,10000)
+   if(num%3==0 or num%5==0):
+      return '<h5>Did you know ?</h5><sub>'+facts[random.randint(0,len(facts))]+'</sub>'
+   else:
+      return ''

@@ -1,6 +1,6 @@
 from flask import render_template,request,make_response,flash,redirect,url_for,g
 from app import app,kernel,db,login_manager,bcrypt,mail
-from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,BotCheck
+from helper import GetWelcomeMessage,GetContactMessage,GetPasswordResetMessage,BotCheck,getfacts,factsloaded,facts
 from forms import RegistrationForm,LoginForm,ContactForm,ResetRequestForm,ResetForm
 from models import User,Message,Reset
 import chatprocess
@@ -317,6 +317,7 @@ def reply():
         SessionID=str(random.randint(1,999999))
         sr=kernel.respond(userreply)
     
+    sr=sr+getfacts()
     try:
         resp = make_response(sr)
         resp.set_cookie('SessionID',SessionID )

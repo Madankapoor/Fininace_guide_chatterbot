@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1">
+    <category>
+        <pattern>BOMBAY STOCK EXCHANGE</pattern>
+        <template>The first and largest securities market in India, the Bombay Stock Exchange (BSE) was established in 1875 as the Native Share and Stock Brokers' Association. Based in Mumbai, India, the BSE lists close to 6,000 companies and is one of the largest exchanges in the world</template>
+    </category>
+    <category>
+        <pattern>BSE</pattern>
+        <template>The first and largest securities market in India, the Bombay Stock Exchange (BSE) was established in 1875 as the Native Share and Stock Brokers' Association. Based in Mumbai, India, the BSE lists close to 6,000 companies and is one of the largest exchanges in the world</template>
+    </category>
+    <category>
+        <pattern>ROLES OF STOCK EXCHANGE</pattern>
+        <template>Stock exchanges have multiple roles in the economy, like Raising capital for businesses,creating investment opportunities for small investors etc..</template>
+    </category>
+    <category>
+        <pattern>WHAT ARE STOCKS</pattern>
+        <template>Plain and simple, stock is a share in the ownership of a company. As you acquire more stock, your ownership stake in the company becomes greater</template>
+    </category>
+    <category>
+        <pattern>WHAT IS STOCK</pattern>
+        <template>Plain and simple, stock is a share in the ownership of a company. As you acquire more stock, your ownership stake in the company becomes greater</template>
+    </category>
+    <category>
+        <pattern>DEFINE STOCK</pattern>
+        <template>Plain and simple, stock is a share in the ownership of a company. As you acquire more stock, your ownership stake in the company becomes greater</template>
+    </category>
+    <category>
+        <pattern>DEFINE STOCKS</pattern>
+        <template>Plain and simple, stock is a share in the ownership of a company. As you acquire more stock, your ownership stake in the company becomes greater</template>
+    </category>
+    <category>
+        <pattern>WHAT IS SHARES</pattern>
+        <template>Shares are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>WHAT IS SHARE</pattern>
+        <template>Shares are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>DEFINE SHARE</pattern>
+        <template>Shares are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>DEFINE SHARES</pattern>
+        <template>Shares are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>WHAT IS EQUITIES</pattern>
+        <template>Equity are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>WHAT IS EQUITY</pattern>
+        <template>Equity are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>DEFINE EQUITY</pattern>
+        <template>Equity are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>DEFINE EQUITIES</pattern>
+        <template>Equity are also called as Stocks <srai>DEFINE STOCKS</srai></template>
+    </category>
+    <category>
+        <pattern>WHERE TO GET *</pattern>
+        <template>
+            <think><set name = "xxzza"> <star index = "1" /></set></think>
+            <condition name = "xxzza" value = "STOCKS">
+                In Stock Exchange you can buy and sell stocks
+                You need Demat Account where electronic record of shares are kept
+            </condition>
+            <condition name = "xxzza" value = "SHARES">
+                In Stock Exchange you can buy and sell shares
+                You need Demat Account where electronic record of shares are kept
+            </condition>
+            I helped you.
+        </template>
+    </category>
+    <category>
+        <pattern>HOW TO CLAIM MY SHARES</pattern>
+        <template>Your Demat account claims it.  Every shareholder will have a Dematerialized account for the purpose of transacting shares.</template>
+    </category>
+</aiml>
